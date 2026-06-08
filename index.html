@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hyperticks | Profile Settings</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="app">
+		<aside class="sidebar" aria-label="Primary">
+			<div class="brand"><span class="mark" aria-hidden="true"><i></i></span>Hyperticks</div>
+			<nav class="nav">
+				<a href="#">Dashboard</a>
+				<a href="#">Marketplace</a>
+				<a href="#">My Wallet</a>
+				<a href="#">Blog</a>
+				<a href="#">Affiliate</a>
+				<a href="#">Announcements</a>
+				<a href="#">Accounts</a>
+				<a href="#">Leaderboard</a>
+				<a class="active" href="#" aria-current="page">Profile Settings</a>
+				<a href="#">Notifications</a>
+			</nav>
+			<div class="sidebar-actions">
+				<button class="meta" type="button">MetaTrader <span aria-hidden="true">↗</span></button>
+				<button class="challenge" type="button">Start a New Challenge</button>
+				<button class="signout" type="button">SIGN OUT</button>
+			</div>
+		</aside>
+
+		<div class="content">
+			<section class="shell">
+				<header class="topbar">
+					<div class="cfp"><strong>CFP: 101</strong><time>00:00:00</time><span>Redeem</span></div>
+					<div class="user"><b>Joe Slim</b><span>|</span>User ID: <b>112436</b></div>
+				</header>
+
+				<main>
+					<h1>Profile Settings</h1>
+					<section class="profile" aria-label="Profile summary">
+						<div class="identity">
+							<div class="avatar-card">
+								<div class="avatar" aria-hidden="true"></div>
+								<button class="photo" type="button"><span>Change Photo</span><small>Max size: 5MB</small></button>
+							</div>
+							<dl class="details">
+								<div><dt>Name</dt><dd>Full Name</dd></div>
+								<div><dt>Username</dt><dd>@username</dd></div>
+								<div><dt>Email</dt><dd>email@email.com</dd></div>
+								<div><dt>Account created on</dt><dd>August 25th, 2023</dd></div>
+							</dl>
+						</div>
+						<aside class="kyc">
+							<div class="kyc-label">KYC Status</div>
+							<h2>To be verified</h2>
+							<button class="pill" type="button">SUBMIT KYC</button>
+						</aside>
+					</section>
+
+					<section class="section" aria-labelledby="personal-title">
+						<h2 id="personal-title">Personal Info</h2>
+						<form id="personalForm">
+							<div class="grid">
+								<div class="field"><label for="phone">Phone</label><input id="phone" name="phone" autocomplete="tel" placeholder="Enter Phone Number"></div>
+								<div class="field"><label for="address">Address</label><input id="address" name="address" autocomplete="street-address" placeholder="Enter address details"></div>
+								<div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" value="Beirut"></div>
+								<div class="field select"><label for="country">Country</label><select id="country" name="country" autocomplete="country-name"><option value="">Select Country</option><option>Lebanon</option><option>United Arab Emirates</option><option>United States</option></select></div>
+								<div class="field"><label for="state">State</label><input id="state" name="state" autocomplete="address-level1" placeholder="State / Region"></div>
+								<div class="field"><label for="zip">Zip Code</label><input id="zip" name="zip" autocomplete="postal-code" value="12345"></div>
+							</div>
+							<div class="actions">
+								<button class="save" type="submit">Save Changes</button>
+								<div class="status-message" role="status" aria-live="polite">Changes saved (temporary message goes here? Green for success, red for error)</div>
+							</div>
+						</form>
+					</section>
+
+					<section class="section password" aria-labelledby="password-title">
+						<h2 id="password-title">Update Password</h2>
+						<form id="passwordForm">
+							<div class="password-grid">
+								<div class="field"><label for="current-password">Current Password</label><input id="current-password" name="current-password" type="password" autocomplete="current-password" placeholder="Enter password"></div>
+								<div class="password-stack">
+									<div class="field"><label for="new-password">New Password</label><input id="new-password" name="new-password" type="password" autocomplete="new-password" placeholder="Type new password"></div>
+									<div class="field"><label for="confirm-password">Confirm Password</label><input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Enter new password again"></div>
+									<div class="actions"><button class="save" type="submit">Save Changes</button></div>
+								</div>
+							</div>
+						</form>
+					</section>
+				</main>
+			</section>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
