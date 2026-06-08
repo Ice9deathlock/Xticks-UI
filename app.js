@@ -7,7 +7,7 @@
 
 (function () {
 	const NAV = [
-		{ key: 'dashboard', label: 'Dashboard', href: 'index.html' },
+		{ key: 'dashboard', label: 'Dashboard', href: 'dashboard.html' },
 		{ key: 'wallet', label: 'My Wallet', href: 'wallet.html' },
 		{ key: 'blog', label: 'Blog', href: '#' },
 		{ key: 'affiliate', label: 'Affiliate', href: 'affiliate.html' },
@@ -32,7 +32,7 @@
 				return `<a href="${item.href}"${cls}>${item.label}${badge}</a>`;
 			}).join('');
 			sidebar.innerHTML = `
-				<a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Hyperticks</a>
+				<a class="brand" href="dashboard.html"><span class="mark" aria-hidden="true"></span>Hyperticks</a>
 				<nav class="nav" aria-label="Primary">${links}</nav>
 				<div class="sidebar-actions">
 					<button class="btn-meta" type="button">MetaTrader <span aria-hidden="true">↗</span></button>

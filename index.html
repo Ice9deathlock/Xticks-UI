@@ -3,142 +3,451 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hyperticks | Dashboard</title>
+	<title>Hyperticks | Futures Prop Trading Made Accessible</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="landing.css">
 </head>
-<body data-page="dashboard">
-	<div class="app">
-		<aside class="sidebar" aria-label="Primary"></aside>
-		<div class="content">
-			<section class="shell">
-				<header class="topbar"></header>
-				<main class="page">
-					<div class="page-head">
-						<h1>Dashboard</h1>
-						<button class="share-btn" type="button"><span class="dot"></span>Share Stats ⌄</button>
-					</div>
+<body>
 
-					<section class="dash-grid">
-						<article class="card account">
-							<div class="card-head"><h2>Account Details</h2><button type="button">SWITCH ACCOUNT ⌄</button></div>
-							<div class="metrics">
-								<div><span>Type</span><strong>$100,000.00</strong></div>
-								<div><span>Level / Phase</span><strong>Phase 2</strong></div>
-								<div><span>Trading Days</span><strong>6</strong></div>
-								<div><span>Status</span><strong class="ok">Ongoing</strong></div>
-							</div>
-							<div class="foot">
-								<div><b>Account succeeded and passed to phase 2</b><span>AUG. 8 2023</span></div>
-								<div><span>Account ID: 124921-UJD</span><b>•••</b></div>
-							</div>
-						</article>
-
-						<article class="card npl">
-							<h2>Net Profit / Loss</h2>
-							<strong class="big">- $1,000.00</strong>
-							<span class="tag-red">↗ 100%</span>
-							<div class="npl-actions">
-								<button type="button">Apply Booster</button>
-								<div class="pill-select">NONE <span class="chev">⌄</span></div>
-							</div>
-						</article>
-
-						<article class="card mini"><span>Balance</span><strong>$99,000.00</strong></article>
-						<article class="card mini"><span>Equity</span><strong>$99,000.00</strong></article>
-						<article class="card mini wide"><span>Target profit</span><div class="bar"><strong>$5,000.00</strong><i></i></div></article>
-
-						<article class="card share-card">
-							<h2>Profit Share</h2>
-							<strong class="big">---</strong>
-							<p>Complete challenges 1 &amp; 2 to become a funded trader, and make profits</p>
-						</article>
-
-						<article class="card mini wide"><span>Max Equity Stop Out</span><strong>$88,000.00</strong></article>
-						<article class="card mini wide"><span>Daily Loss Limit</span><div class="bar danger"><strong>$5,000.00</strong><i></i></div></article>
-					</section>
-
-					<section class="card today">
-						<div class="card-head"><h2>Activity for Today</h2><span>Last updated on dd/mm/yyyy</span></div>
-						<div class="today-grid">
-							<div><span>Starting Balance</span><strong>$102,000.00</strong></div>
-							<div><span>Starting Equity</span><strong>$102,000.00</strong></div>
-							<div><span>Max Drawdown</span><strong>$97,000.00</strong></div>
-							<div><span>Profit / Loss</span><strong>-$3,000.00</strong><em>↘ 0.00%</em></div>
-						</div>
-					</section>
-
-					<section class="card activity">
-						<div class="activity-head">
-							<div><h2>Activity</h2><span>Updated on AUG. 8 2023</span></div>
-							<div class="segmented" role="tablist">
-								<button type="button">Hourly</button>
-								<button type="button">Daily</button>
-								<button type="button" class="is-active">Weekly</button>
-							</div>
-						</div>
-						<div class="chart">
-							<svg viewBox="0 0 900 300" role="img" aria-label="Equity and balance over time">
-								<defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1">
-									<stop offset="0" stop-color="#00d89a" stop-opacity=".36"/>
-									<stop offset="1" stop-color="#00d89a" stop-opacity=".03"/>
-								</linearGradient></defs>
-								<g class="gridlines"><path d="M0 30H900M0 75H900M0 120H900M0 165H900M0 210H900M0 255H900"/></g>
-								<path class="area" d="M0 220 C60 145 115 128 170 140 C245 157 252 80 315 67 C355 62 367 150 420 202 C486 267 560 228 605 165 C675 64 760 69 828 119 C860 142 881 151 900 154 L900 300 L0 300 Z"/>
-								<path class="line gray" d="M0 268 C56 153 126 121 191 139 C260 158 263 73 315 53 C361 35 371 158 422 221 C488 297 556 248 605 165 C671 57 740 51 807 98 C847 126 865 143 900 147"/>
-								<path class="line green" d="M0 220 C58 152 113 129 178 136 C244 143 260 112 300 69 C346 17 366 138 428 187 C494 241 565 240 610 174 C672 105 735 87 807 117 C848 134 869 148 900 156"/>
-								<g class="axis">
-									<text x="2" y="292">0</text><text x="42" y="292">1</text><text x="82" y="292">2</text><text x="122" y="292">3</text><text x="162" y="292">4</text><text x="202" y="292">5</text><text x="242" y="292">6</text><text x="282" y="292">7</text><text x="322" y="292">8</text><text x="362" y="292">9</text><text x="402" y="292">10</text><text x="442" y="292">11</text><text x="482" y="292">12</text><text x="522" y="292">13</text><text x="562" y="292">14</text><text x="602" y="292">15</text><text x="642" y="292">16</text><text x="682" y="292">17</text><text x="722" y="292">18</text><text x="762" y="292">19</text><text x="802" y="292">20</text><text x="842" y="292">21</text><text x="882" y="292">22</text>
-									<text x="888" y="257">0</text><text x="884" y="212">10</text><text x="884" y="167">20</text><text x="884" y="122">30</text><text x="884" y="77">40</text><text x="884" y="32">60</text>
-								</g>
-								<g class="tip">
-									<rect x="480" y="118" width="104" height="76" rx="4"/>
-									<text x="532" y="143" text-anchor="middle">Equity:</text>
-									<text x="532" y="160" text-anchor="middle">Balance:</text>
-									<text x="532" y="177" text-anchor="middle">date/time</text>
-								</g>
-								<circle class="dot" cx="532" cy="210" r="6"/>
-							</svg>
-						</div>
-					</section>
-
-					<section class="section statlist">
-						<h2>Trading Stats</h2>
-						<div class="row"><span>STARTING BALANCE</span><strong>$50,000<sub>.00</sub></strong></div>
-						<div class="row"><span>CURRENT BALANCE</span><strong>$66,242<sub>.68</sub></strong></div>
-						<div class="row"><span>CURRENT EQUITY</span><strong>$66,242<sub>.68</sub></strong></div>
-						<div class="row"><span>CUMULATIVE PNL</span><strong>$16,242<sub>.68</sub></strong></div>
-						<div class="row"><span>% RETURN</span><strong>32<sub>.49</sub></strong></div>
-						<div class="row"><span>ACTIVE DAYS</span><strong>7</strong></div>
-						<div class="row"><span>AVG. WINNING TRADE</span><strong>$563<sub>.40</sub></strong></div>
-						<div class="row"><span>PROFIT FACTOR</span><strong>1<sub>.78</sub></strong></div>
-						<div class="row"><span>WINNING TRADE PCT</span><strong>66<sub>.00</sub></strong></div>
-						<div class="row"><span>TOTAL NO. TRADES</span><strong>101</strong></div>
-					</section>
-
-					<section class="card table-card history-table">
-						<div class="card-head"><h2>Trading History</h2><span>Last updated on dd/mm/yyyy</span></div>
-						<div class="table-wrap">
-							<table class="data">
-								<thead><tr><th>Ticket #</th><th>Type</th><th>Open Time</th><th>Close Time</th><th>Symbol</th><th>Lots</th><th>Net Profit</th></tr></thead>
-								<tbody>
-									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
-									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
-									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
-									<tr class="accent"><td>---</td><td>1% Booster</td><td>2023-10-04</td><td>---</td><td>---</td><td>---</td><td>+$1,000.00</td></tr>
-									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
-									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
-								</tbody>
-							</table>
-						</div>
-						<button class="expand" type="button">Expand History ⌄</button>
-					</section>
-				</main>
-			</section>
+	<!-- Promo ticker -->
+	<div class="ticker" aria-hidden="true">
+		<div class="ticker__track">
+			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
+			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
+			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
+			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
+			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
+			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
 		</div>
 	</div>
-	<script src="app.js"></script>
+
+	<!-- Nav -->
+	<header class="nav">
+		<div class="container nav__inner">
+			<a class="brand" href="#top"><span class="brand__dot" aria-hidden="true"></span>Hyperticks</a>
+			<nav class="nav__links" aria-label="Primary">
+				<a href="#about">About Us</a>
+				<a href="#rewards">Announcements</a>
+				<a href="#faq">FAQ's</a>
+				<a href="dashboard.html">Login</a>
+			</nav>
+			<a class="btn btn--accent nav__cta" href="marketplace.html">Get started</a>
+		</div>
+	</header>
+
+	<!-- Hero -->
+	<section class="hero" id="top">
+		<div class="container hero__inner">
+			<img class="hero__art" src="assets/hero-art.webp" alt="Trade All Markets With One Firm — HyperTicks is the first futures evaluation firm to step into FX, bringing a unique futures-style edge and a fresh twist to the industry.">
+			<div class="hero__cta">
+				<a class="btn btn--solid" href="marketplace.html">Get Started</a>
+				<a class="btn btn--ghost" href="#">Join Discord</a>
+			</div>
+
+			<div class="hero__pills">
+				<span class="hpill">10K Traders Using Hyperticks</span>
+				<span class="hpill">300+ Instruments Available</span>
+				<span class="hpill">$100K+ Rewarded Monthly</span>
+				<span class="hpill">24h Reward Processing</span>
+			</div>
+
+			<div class="hero__trust">
+				<span class="stars" aria-hidden="true">★★★★★</span>
+				<b>4.5/5</b> Trustpilot Rated
+			</div>
+		</div>
+	</section>
+
+	<!-- Exclusive Hyperticks Features -->
+	<section class="section features" id="about">
+		<div class="container center">
+			<span class="pill-chip">Why Hyperticks</span>
+			<h2 class="gradient-text section__title">Exclusive Hyperticks Features</h2>
+		</div>
+		<div class="container features__grid">
+			<article class="feature">
+				<div class="feature__icon">⇄</div>
+				<h3>Futures + FX in One Firm</h3>
+				<p>With HyperTicks, you can access both simulated markets Futures and FX from one place, giving you the flexibility to trade your edge across multiple environments.</p>
+			</article>
+			<article class="feature">
+				<div class="feature__icon">⏱</div>
+				<h3>24-Hour</h3>
+				<p>We will process your rewards in less than 24H or you get 120% of your reward.</p>
+			</article>
+			<article class="feature">
+				<div class="feature__icon">🏆</div>
+				<h3>Reward System HTTP</h3>
+				<p>Supercharge your trading career with our exclusive scaling plan. Grow your account by 100% with every 10% Reward on our instant accounts.</p>
+			</article>
+			<article class="feature">
+				<div class="feature__icon">⚡</div>
+				<h3>Best Instant Programs</h3>
+				<p>Skip the wait with our instant programs and get straight to trading — no consistency rule, no drawn-out evaluation, just your edge and the markets.</p>
+			</article>
+		</div>
+	</section>
+
+	<!-- Stats strip -->
+	<section class="section stats-wrap">
+		<div class="container">
+			<div class="stats">
+				<div><strong>10K</strong><span>Traders</span></div>
+				<div><strong>$100K+</strong><span>In Rewards Monthly</span></div>
+				<div><strong>$10.4K</strong><span>Highest Reward</span></div>
+				<div><strong>24/7</strong><span>Support</span></div>
+				<div><strong>4.5/5</strong><span>Trustpilot</span></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Recent Rewards -->
+	<section class="section rewards" id="rewards">
+		<div class="container">
+			<h2 class="gradient-text section__title center">Recent Rewards</h2>
+			<div class="rewards__grid">
+				<div class="reward"><span class="reward__coin">$</span><div><b>John Elliss</b><span class="reward__amt">$2800</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Adrian Sowandi</b><span class="reward__amt">$4200</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Slade Gorman</b><span class="reward__amt">$8400</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Rudy Helou</b><span class="reward__amt">$2500</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Chum Yit</b><span class="reward__amt">$3000</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Abidexx Slawek</b><span class="reward__amt">$3500</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Jae Kim</b><span class="reward__amt">$2100</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Collin Jackson</b><span class="reward__amt">$6300</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Arnold Felamon</b><span class="reward__amt">$7000</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Varun Chatterjee</b><span class="reward__amt">$1700</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Oliver Laurent</b><span class="reward__amt">$3850</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Matthew Radacz</b><span class="reward__amt">$1400</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Uvraj Agrawal</b><span class="reward__amt">$2100</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Omar Owaywa</b><span class="reward__amt">$770</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Luke Gil</b><span class="reward__amt">$2310</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Louis Gross</b><span class="reward__amt">$1300</span></div></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Choose Your Program -->
+	<section class="section programs" id="programs">
+		<div class="container center">
+			<h2 class="gradient-text section__title center">Choose Your Program</h2>
+			<div class="market-toggle">
+				<button type="button" class="is-active">FX</button>
+				<button type="button">Futures</button>
+			</div>
+			<p class="programs__sub">Evaluations programs</p>
+			<div class="steps">
+				<button type="button" class="step is-active"><span class="step__n">1</span> 1 Step</button>
+				<button type="button" class="step"><span class="step__n">2</span> 2 Step</button>
+				<button type="button" class="step"><span class="step__n">3</span> Hyper Instant</button>
+				<button type="button" class="step"><span class="step__n">4</span> Instant</button>
+			</div>
+		</div>
+
+		<div class="container pricing">
+			<!-- 5K -->
+			<article class="price-card">
+				<div class="price-card__head"><h3 class="gradient-accent">$5K</h3><span>1 Step</span></div>
+				<ul class="price-rows">
+					<li><span>Target</span><b>7%</b></li>
+					<li><span>Daily Loss Limit</span><b>3%</b></li>
+					<li><span>Maximum Loss Limit</span><b>5%</b></li>
+					<li><span>Drawdown Mode</span><b>Static</b></li>
+					<li><span>Consistency</span><b>None</b></li>
+					<li><span>Lev</span><b>1:50</b></li>
+					<li><span>Refundable Fee</span><b>100%</b></li>
+					<li><span>Booster</span><b>Available</b></li>
+					<li><span>Industry's Lowest Target</span><b>✓</b></li>
+					<li class="accent"><span>Average Reward</span><b>$296</b></li>
+				</ul>
+				<div class="price-card__price"><b>$66</b><s>$132</s></div>
+				<a class="btn btn--pill" href="checkout.html">Start Trading Now</a>
+			</article>
+			<!-- 10K -->
+			<article class="price-card">
+				<div class="price-card__head"><h3 class="gradient-accent">$10K</h3><span>1 Step</span></div>
+				<ul class="price-rows">
+					<li><span>Target</span><b>7%</b></li>
+					<li><span>Daily Loss Limit</span><b>3%</b></li>
+					<li><span>Maximum Loss Limit</span><b>5%</b></li>
+					<li><span>Drawdown Mode</span><b>Static</b></li>
+					<li><span>Consistency</span><b>None</b></li>
+					<li><span>Lev</span><b>1:50</b></li>
+					<li><span>Refundable Fee</span><b>100%</b></li>
+					<li><span>Booster</span><b>Available</b></li>
+					<li><span>Industry's Lowest Target</span><b>✓</b></li>
+					<li class="accent"><span>Average Reward</span><b>$588</b></li>
+				</ul>
+				<div class="price-card__price"><b>$110</b><s>$220</s></div>
+				<a class="btn btn--pill" href="checkout.html">Start Trading Now</a>
+			</article>
+			<!-- 25K -->
+			<article class="price-card">
+				<div class="price-card__head"><h3 class="gradient-accent">$25K</h3><span>1 Step</span></div>
+				<ul class="price-rows">
+					<li><span>Target</span><b>7%</b></li>
+					<li><span>Daily Loss Limit</span><b>3%</b></li>
+					<li><span>Maximum Loss Limit</span><b>5%</b></li>
+					<li><span>Drawdown Mode</span><b>Static</b></li>
+					<li><span>Consistency</span><b>None</b></li>
+					<li><span>Lev</span><b>1:50</b></li>
+					<li><span>Refundable Fee</span><b>100%</b></li>
+					<li><span>Booster</span><b>Available</b></li>
+					<li><span>Industry's Lowest Target</span><b>✓</b></li>
+					<li class="accent"><span>Average Reward</span><b>$1388</b></li>
+				</ul>
+				<div class="price-card__price"><b>$290</b><s>$580</s></div>
+				<a class="btn btn--pill" href="checkout.html">Start Trading Now</a>
+			</article>
+			<!-- 50K -->
+			<article class="price-card">
+				<div class="price-card__head"><h3 class="gradient-accent">$50K</h3><span>1 Step</span></div>
+				<ul class="price-rows">
+					<li><span>Target</span><b>7%</b></li>
+					<li><span>Daily Loss Limit</span><b>3%</b></li>
+					<li><span>Maximum Loss Limit</span><b>5%</b></li>
+					<li><span>Drawdown Mode</span><b>Static</b></li>
+					<li><span>Consistency</span><b>None</b></li>
+					<li><span>Lev</span><b>1:50</b></li>
+					<li><span>Refundable Fee</span><b>100%</b></li>
+					<li><span>Booster</span><b>Available</b></li>
+					<li><span>Industry's Lowest Target</span><b>✓</b></li>
+					<li class="accent"><span>Average Reward</span><b>$2689</b></li>
+				</ul>
+				<div class="price-card__price"><b>$490</b><s>$980</s></div>
+				<a class="btn btn--pill" href="checkout.html">Start Trading Now</a>
+			</article>
+			<!-- 100K -->
+			<article class="price-card price-card--popular">
+				<span class="popular">Most Popular</span>
+				<div class="price-card__head"><h3 class="gradient-accent">$100K</h3><span>1 Step</span></div>
+				<ul class="price-rows">
+					<li><span>Target</span><b>7%</b></li>
+					<li><span>Daily Loss Limit</span><b>3%</b></li>
+					<li><span>Maximum Loss Limit</span><b>5%</b></li>
+					<li><span>Drawdown Mode</span><b>Static</b></li>
+					<li><span>Consistency</span><b>None</b></li>
+					<li><span>Lev</span><b>1:50</b></li>
+					<li><span>Refundable Fee</span><b>100%</b></li>
+					<li><span>Booster</span><b>Available</b></li>
+					<li><span>Industry's Lowest Target</span><b>✓</b></li>
+					<li class="accent"><span>Average Reward</span><b>$6113</b></li>
+				</ul>
+				<div class="price-card__price"><b>$778</b><s>$1556</s></div>
+				<a class="btn btn--pill" href="checkout.html">Start Trading Now</a>
+			</article>
+		</div>
+
+		<div class="container center">
+			<div class="coupon"><strong class="gradient-text">50% OFF + BOGO</strong><span class="coupon__code">USE CODE: <b>BOGO50</b></span></div>
+		</div>
+	</section>
+
+	<!-- How It Works -->
+	<section class="section how">
+		<div class="container center">
+			<h2 class="gradient-text section__title center">How It Works</h2>
+		</div>
+		<div class="container how__grid">
+			<article class="how-card">
+				<p class="how-card__step gradient-accent">Step 1</p>
+				<div class="how-card__icon">🖱️</div>
+				<h3>Choose your program</h3>
+				<p class="how-card__desc">Pass your evaluation, or skip it with our instant programs.</p>
+				<div class="how-card__row"><span class="dot"></span><b>Choose Your Program</b></div>
+				<div class="tags"><span>1 Step</span><span>2 Step</span><span>Hyper instant</span><span>Instant</span></div>
+			</article>
+			<article class="how-card">
+				<p class="how-card__step gradient-accent">Step 2</p>
+				<div class="how-card__icon">🪙</div>
+				<h3>Claim 80% Split</h3>
+				<p class="how-card__desc">The most important part where you trade your strategy and get rewarded.</p>
+				<div class="how-card__row"><span class="dot"></span><b>Flexible reward options</b></div>
+				<div class="tags"><span>Rise</span><span>Digital Wallets</span></div>
+			</article>
+		</div>
+	</section>
+
+	<!-- Testimonials -->
+	<section class="section testimonials">
+		<div class="container testimonials__grid">
+			<article class="tcard">
+				<h3>Elvis Finch</h3>
+				<div class="stars" aria-hidden="true">★★★★★</div>
+				<p>One of the best prop firms in the game right now. Best instant funded account, i would recommend getting the instant pro + it's an absolute game changer.</p>
+			</article>
+			<article class="tcard tcard--active">
+				<h3>Ralph Turner</h3>
+				<div class="stars" aria-hidden="true">★★★★★</div>
+				<p>Growing firm, working with traders to build their knowledge and the community of traders. Platform is awesome and intuitive.</p>
+			</article>
+			<article class="tcard">
+				<h3>Sophia</h3>
+				<div class="stars" aria-hidden="true">★★★★★</div>
+				<p>Amazing experience with fast support, fastest executions from all the prop firms I've used so far and some unique trading platforms. The best rules out there for evaluations, overall great experience.</p>
+			</article>
+		</div>
+	</section>
+
+	<!-- Comparison -->
+	<section class="section compare" id="compare">
+		<div class="container center">
+			<h2 class="gradient-text section__title center">Hyperticks Compared to Others</h2>
+		</div>
+		<div class="container compare__grid">
+			<div class="compare-card compare-card--us">
+				<div class="compare-card__head">Hyperticks</div>
+				<div class="crow"><span>Instant With No Consistency</span><b>Available</b></div>
+				<div class="crow"><span>Target</span><b>7%</b></div>
+				<div class="crow"><span>Evaluation Fee</span><b>Starting at $30</b></div>
+				<div class="crow"><span>Booster On All Stages</span><b>Available</b></div>
+				<div class="crow"><span>Coin Reward System</span><b>Available</b></div>
+				<div class="crow"><span>Rewards Processing</span><b>Fast</b></div>
+				<div class="crow"><span>Markets</span><b>2</b></div>
+			</div>
+			<div class="compare-card">
+				<div class="compare-card__head">Others</div>
+				<div class="crow"><span>Instant With No Consistency</span><b>Not Available</b></div>
+				<div class="crow"><span>Target</span><b>10%</b></div>
+				<div class="crow"><span>Evaluation Fee</span><b>Starting at $50</b></div>
+				<div class="crow"><span>Booster On All Stages</span><b>Not Available</b></div>
+				<div class="crow"><span>Coin Reward System</span><b>Not Available</b></div>
+				<div class="crow"><span>Rewards Processing</span><b>Slow</b></div>
+				<div class="crow"><span>Markets</span><b>1</b></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section class="section faq" id="faq">
+		<div class="container center">
+			<span class="pill-chip">FAQs</span>
+			<h2 class="gradient-text section__title center">Frequently Asked Questions</h2>
+		</div>
+		<div class="container faq__list">
+			<details open>
+				<summary>What Payout Methods Are Accepted?<span class="chev" aria-hidden="true"></span></summary>
+				<p>We currently offer two payout methods: Crypto and Rise. You can choose your preferred method when requesting your payout. If you need help with either option, feel free to contact our support team.</p>
+			</details>
+			<details>
+				<summary>Supported Platforms?<span class="chev" aria-hidden="true"></span></summary>
+				<p>We support powerful professional platforms including ATAS, Quantower, NinjaTrader, and DeepMap so you can trade your edge across multiple environments.</p>
+			</details>
+			<details>
+				<summary>Why Choose HyperTicks?<span class="chev" aria-hidden="true"></span></summary>
+				<p>Futures and FX in one firm, the industry's lowest target, boosters on all stages, a coin reward system, and reward processing in under 24 hours.</p>
+			</details>
+			<details>
+				<summary>What Are HTTP Tokens?<span class="chev" aria-hidden="true"></span></summary>
+				<p>HTTP tokens power the Hyperticks reward system — earn and redeem them for perks, boosters, and discounts as you trade.</p>
+			</details>
+			<details>
+				<summary>How to Acquire HTTP Tokens?<span class="chev" aria-hidden="true"></span></summary>
+				<p>Earn tokens by completing tasks and milestones, purchase them at checkout, or receive them as part of your reward payouts.</p>
+			</details>
+			<details>
+				<summary>What Are Available Payment Methods?<span class="chev" aria-hidden="true"></span></summary>
+				<p>You can pay with crypto (BTC, ETH and more) or with major credit and debit cards at checkout.</p>
+			</details>
+			<details>
+				<summary>How to Receive a Live Funded Account with HyperTicks?<span class="chev" aria-hidden="true"></span></summary>
+				<p>Pass your evaluation or choose an instant program, meet the objectives, and request your funded account from your dashboard.</p>
+			</details>
+		</div>
+	</section>
+
+	<!-- Discord -->
+	<section class="section community" id="discord">
+		<div class="container">
+			<div class="discord-card">
+				<div class="discord-orb" aria-hidden="true">🎮</div>
+				<h2 class="gradient-text">Join our Community</h2>
+				<a class="btn btn--pill discord-cta" href="#">Join Hyperticks Discord</a>
+				<a class="btn btn--pill discord-cta" href="dashboard.html">Join Hyperticks Dashboard</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container footer__grid">
+			<div class="footer__brand">
+				<a class="brand" href="#top"><span class="brand__dot" aria-hidden="true"></span>Hyperticks</a>
+				<p>📍 Dubai Digital Park</p>
+				<p>✉ business@hyperticks.com</p>
+				<div class="footer__actions">
+					<a class="btn btn--mini" href="marketplace.html">Get Started</a>
+					<a class="btn btn--mini" href="dashboard.html">Login</a>
+				</div>
+			</div>
+			<div class="footer__col">
+				<h3>About</h3>
+				<a href="#about">About Us</a>
+				<a href="#faq">FAQ</a>
+				<a href="#discord">Get In Touch</a>
+				<a href="#rewards">Announcements</a>
+				<a href="marketplace.html">Get Started</a>
+				<a href="dashboard.html">Login</a>
+			</div>
+			<div class="footer__news">
+				<h3>Join Our Newsletter</h3>
+				<form class="newsletter" onsubmit="return false">
+					<input type="email" placeholder="Enter your email" aria-label="Email">
+					<button type="submit">Send</button>
+				</form>
+				<h3 class="follow">Follow Us:</h3>
+				<div class="socials" aria-hidden="true"><span>in</span><span>𝕏</span><span>f</span><span>◐</span><span>▶</span></div>
+			</div>
+		</div>
+		<div class="container footer__bar">
+			<span>© 2026 Hyperticks. All Rights Reserved.</span>
+			<span class="footer__legal-links"><a href="#">Terms &amp; Conditions</a> <i>|</i> <a href="#">Privacy Policy</a></span>
+		</div>
+	</footer>
+
+	<!-- Trade like a Pro / Legal -->
+	<section class="legal">
+		<div class="container center">
+			<h2 class="gradient-text legal__title">Trade like a Pro</h2>
+			<a class="btn btn--pill" href="marketplace.html">Get Started Today</a>
+		</div>
+		<div class="container legal__body">
+			<p>The materials, content, and any other information made available by HyperTicks whether through its website, distributed documents, digital interfaces, or other forms of communication, are provided strictly for general informational purposes only. Nothing contained herein constitutes investment advice, a solicitation, or an offer to buy or sell any financial instruments or securities in any jurisdiction. The information is not directed at any particular individual or entity and should not be construed as personalized financial, legal, or tax advice. HyperTicks operates a simulated trading environment intended solely for educational and analytical purposes.</p>
+
+			<h3 class="gradient-text">Risk Disclosure</h3>
+			<p>Engaging with financial markets, even in a simulated or educational context, involves a high degree of risk. Simulated or hypothetical trading activity is not suitable for all individuals. Real-world trading in futures, foreign exchange, derivatives, and other instruments can result in substantial financial loss, including the loss of the entire amount invested or more. Any performance results based on simulated activity do not guarantee that live markets will behave in a similar manner.</p>
+
+			<h3 class="gradient-text">Hypothetical Performance Disclosure</h3>
+			<p>Performance results shown on or through the platform are based on hypothetical or simulated trading and do not reflect actual trading activity. Hypothetical performance has numerous inherent limitations and is developed with the benefit of hindsight. Factors such as market volatility, liquidity constraints, execution slippage, and the psychological pressures of live decision-making are either simplified or absent, and therefore the outcomes may differ significantly from actual trading results.</p>
+
+			<h3 class="gradient-text">CFTC Rule 4.41 Compliance Statement</h3>
+			<p>In compliance with Rule 4.41 of the U.S. Commodity Futures Trading Commission (CFTC), users are hereby advised that any performance results shown by HyperTicks are hypothetical or simulated unless explicitly stated otherwise. These results are derived from backtesting or modeled assumptions and do not reflect actual trading activity. Simulated results do not account for many of the variables that influence live trading, including liquidity conditions, execution speed, and psychological stress.</p>
+
+			<h3 class="gradient-text">Customer Compensation Disclosure</h3>
+			<p>All trading examples and scenarios presented for illustrative or compensation-related purposes are entirely hypothetical. They are not reflective of live market trading and do not represent actual financial risk. HyperTicks makes no warranty or representation that any individual or trading account will achieve results comparable to those shown or implied by simulated trades.</p>
+
+			<p class="legal__entity">XTICKS SERVICES – FZCO, a company incorporated in the United Arab Emirates with license number 66787, having its registered office at Building A1, Dubai Digital Park, 1, Dubai Silicon Oasis, Dubai.</p>
+		</div>
+	</section>
+
+	<script>
+		document.querySelectorAll('[data-rotate]').forEach((rot) => {
+			const items = rot.querySelectorAll('.rotator__item');
+			if (items.length < 2) return;
+			let i = 0;
+			setInterval(() => {
+				items[i].classList.remove('is-active');
+				i = (i + 1) % items.length;
+				items[i].classList.add('is-active');
+			}, 3000);
+		});
+		document.querySelectorAll('.market-toggle button, .steps .step').forEach((b) => {
+			b.addEventListener('click', () => {
+				const sibs = b.parentElement.children;
+				for (const s of sibs) s.classList.toggle('is-active', s === b);
+			});
+		});
+	</script>
 </body>
 </html>
