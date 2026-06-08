@@ -8,14 +8,12 @@
 (function () {
 	const NAV = [
 		{ key: 'dashboard', label: 'Dashboard', href: 'index.html' },
-		{ key: 'marketplace', label: 'Marketplace', href: 'marketplace.html' },
 		{ key: 'wallet', label: 'My Wallet', href: 'wallet.html' },
 		{ key: 'blog', label: 'Blog', href: '#' },
 		{ key: 'affiliate', label: 'Affiliate', href: 'affiliate.html' },
 		{ key: 'announcements', label: 'Announcements', href: '#', badge: 1 },
 		{ key: 'orders', label: 'Order History', href: '#' },
 		{ key: 'accounts', label: 'Accounts', href: '#' },
-		{ key: 'leaderboard', label: 'Leaderboard', href: '#' },
 		{ key: 'profile', label: 'Profile Settings', href: 'profile.html' },
 		{ key: 'notifications', label: 'Notifications', href: '#', badge: 3 },
 		{ key: 'faq', label: 'FAQ', href: '#' },
@@ -46,10 +44,6 @@
 		const topbar = document.querySelector('.topbar');
 		if (topbar && !topbar.children.length) {
 			topbar.innerHTML = `
-				<div class="cffp">
-					<span><u>CFFP: ${USER.cffp}</u></span>
-					<span>&#9432; Redeem 20 CFFP in <strong>08:24</strong></span>
-				</div>
 				<div class="topuser">
 					<span class="avatar-dot" aria-hidden="true"></span>
 					<b>${USER.name}</b><span class="sep">|</span>

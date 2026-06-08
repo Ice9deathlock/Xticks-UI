@@ -172,7 +172,7 @@ h1, h2, h3, p { margin: 0; }
 .topbar {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
 	gap: 24px;
 }
 .cffp {
