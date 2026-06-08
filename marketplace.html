@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hyperticks | Marketplace</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="marketplace">
+	<div class="app">
+		<aside class="sidebar" aria-label="Primary"></aside>
+		<div class="content">
+			<section class="shell">
+				<header class="topbar"></header>
+				<main class="page">
+					<h1 id="planTitle">Beginner 50K</h1>
+
+					<div class="config-block">
+						<label>Challenge Type</label>
+						<div class="segmented" id="typeSeg" role="tablist">
+							<button type="button" class="is-active">Beginner</button>
+							<button type="button">Pro</button>
+							<button type="button">Instant Pro</button>
+							<button type="button">Instant Pro+</button>
+						</div>
+					</div>
+
+					<div class="config-block">
+						<label>Account Size</label>
+						<div class="config-row">
+							<div class="segmented" id="sizeSeg" role="tablist">
+								<button type="button" class="is-active">$ 50,000</button>
+								<button type="button">$ 100,000</button>
+								<button type="button">$ 150,000</button>
+							</div>
+							<button class="btn-primary" type="button" data-go="checkout.html" id="startTop">Start 50K Challenge</button>
+						</div>
+					</div>
+
+					<section class="compare">
+						<div class="head-row"><span></span><b>EVALUATION</b><b>FUNDED</b></div>
+						<div class="row"><span>MONTHLY PRICE</span><b>$109</b><b>X</b></div>
+						<div class="row"><span>TARGET</span><b>$2500</b><b>X</b></div>
+						<div class="row"><span>DAILY LOSS LIMIT</span><b>$1000</b><b>$1000</b></div>
+						<div class="row"><span>TRAILING MAX DRAWNDOWN</span><b>$2125</b><b>$2125</b></div>
+						<div class="row"><span>DRAWDOWN TYPE</span><b>EOD</b><b>EOD</b></div>
+						<div class="row"><span>MAX CONTRACTS</span><b>3 Mini (15 Micro)</b><b>3 Mini (30 Micro)</b></div>
+						<div class="row"><span>CONSISTENCY</span><b>35%</b><b>40%</b></div>
+						<div class="row"><span>BOOSTER</span><b>Available</b><b>X</b></div>
+						<div class="row"><span>ACTIVATION FEE</span><b>X</b><b>X</b></div>
+						<div class="row"><span>REWARD REQUEST</span><b>X</b><b>On Demand</b></div>
+						<div class="row"><span>MAX ACCOUNT HOLDING</span><b>10</b><b>5</b></div>
+						<div class="cta"><button class="btn-primary" type="button" data-go="checkout.html" id="startBottom">Start 50K Challenge</button></div>
+					</section>
+				</main>
+			</section>
+		</div>
+	</div>
+	<script src="app.js"></script>
+	<script>
+		window.pageInit = function () {
+			const title = document.querySelector('#planTitle');
+			const typeSeg = document.querySelector('#typeSeg');
+			const sizeSeg = document.querySelector('#sizeSeg');
+			let type = 'Beginner';
+			let size = '50K';
+
+			function sizeLabel(text) { return text.replace(/[^0-9]/g, '') ? text.replace('$ ', '').replace(',000', 'K') : text; }
+			function refresh() {
+				title.textContent = type + ' ' + size;
+				document.querySelectorAll('#startTop, #startBottom').forEach((b) => { b.textContent = 'Start ' + size + ' Challenge'; });
+			}
+			typeSeg.addEventListener('segment:change', (e) => { type = e.detail.value; refresh(); });
+			sizeSeg.addEventListener('segment:change', (e) => { size = sizeLabel(e.detail.value); refresh(); });
+		};
+	</script>
+</body>
+</html>

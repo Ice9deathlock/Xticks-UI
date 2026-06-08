@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hyperticks | My Wallet</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="wallet">
+	<div class="app">
+		<aside class="sidebar" aria-label="Primary"></aside>
+		<div class="content">
+			<section class="shell">
+				<header class="topbar"></header>
+				<main class="page">
+					<h1>Wallet</h1>
+					<p class="subtitle">Wallet ID</p>
+
+					<div class="wallet-grid">
+						<div class="wallet-cards">
+							<article class="wallet-card">
+								<div class="label">Withdraw-able Profits <span aria-hidden="true">&#9432;</span></div>
+								<strong class="big">$800.00</strong>
+								<button class="cta" type="button">Cash Out</button>
+							</article>
+							<article class="wallet-card">
+								<div class="label">CFFP</div>
+								<strong class="big">110</strong>
+								<button class="cta" type="button" data-go="checkout.html">Buy More</button>
+							</article>
+						</div>
+
+						<div class="wallet-detail">
+							<div class="block">
+								<h3>Profits details</h3>
+								<div class="line"><span>Trading Profit Shares</span><b>$650</b></div>
+								<div class="line"><span>Affiliate Earnings</span><b>$150</b></div>
+							</div>
+							<div class="block">
+								<h3>CFFP Earnings</h3>
+								<div class="line"><span>Redeemed</span><b>30</b></div>
+								<div class="line"><span>Purchased</span><b>50</b></div>
+								<div class="line"><span>Tasks</span><b>30</b></div>
+							</div>
+						</div>
+					</div>
+
+					<section class="section">
+						<h2>Wallet History</h2>
+						<div class="wallet-tabs">
+							<div class="segmented" id="walletTabs" role="tablist">
+								<button type="button" class="is-active">Earnings</button>
+								<button type="button">CFFP</button>
+							</div>
+						</div>
+
+						<div class="card table-card" id="earningsTable">
+							<div class="table-title">Earnings History</div>
+							<div class="table-wrap">
+								<table class="data">
+									<thead><tr><th>Date</th><th>Amount</th><th>Status</th><th>Type</th><th>Method</th><th>Source</th><th>Total Balance</th></tr></thead>
+									<tbody>
+										<tr><td>2023-10-04</td><td>$200.00</td><td>Pending</td><td>Affiliate Earnings</td><td>CFF Transfer</td><td>Wallet</td><td>$20.00</td></tr>
+										<tr><td>2023-10-04</td><td>$200.00</td><td>Pending</td><td>Affiliate Earnings</td><td>CFF Transfer</td><td>Wallet</td><td>$20.00</td></tr>
+										<tr><td>2023-10-04</td><td>$200.00</td><td>Pending</td><td>Affiliate Earnings</td><td>CFF Transfer</td><td>Wallet</td><td>$20.00</td></tr>
+									</tbody>
+								</table>
+							</div>
+							<button class="expand" type="button">Expand History ⌄</button>
+						</div>
+
+						<div class="card table-card" id="cffpTable" hidden>
+							<div class="table-title">CFFP History</div>
+							<div class="table-wrap">
+								<table class="data">
+									<thead><tr><th>Date</th><th>Amount</th><th>Status</th><th>Type</th><th>Source</th></tr></thead>
+									<tbody>
+										<tr><td>2023-10-04</td><td>20 CFFP</td><td>Completed</td><td>Redeemed</td><td>Daily Task</td></tr>
+										<tr><td>2023-10-03</td><td>50 CFFP</td><td>Completed</td><td>Purchased</td><td>Checkout</td></tr>
+										<tr><td>2023-10-01</td><td>30 CFFP</td><td>Completed</td><td>Tasks</td><td>Onboarding</td></tr>
+									</tbody>
+								</table>
+							</div>
+							<button class="expand" type="button">Expand History ⌄</button>
+						</div>
+					</section>
+				</main>
+			</section>
+		</div>
+	</div>
+	<script src="app.js"></script>
+	<script>
+		window.pageInit = function () {
+			const tabs = document.querySelector('#walletTabs');
+			const earnings = document.querySelector('#earningsTable');
+			const cffp = document.querySelector('#cffpTable');
+			tabs.addEventListener('segment:change', (e) => {
+				const isEarnings = e.detail.value === 'Earnings';
+				earnings.hidden = !isEarnings;
+				cffp.hidden = isEarnings;
+			});
+		};
+	</script>
+</body>
+</html>

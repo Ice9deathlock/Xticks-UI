@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hyperticks | Checkout</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="marketplace">
+	<div class="app">
+		<aside class="sidebar" aria-label="Primary"></aside>
+		<div class="content">
+			<section class="shell">
+				<header class="topbar"></header>
+				<main class="page">
+					<h1>Checkout</h1>
+
+					<form class="checkout" id="checkoutForm" novalidate>
+						<div class="checkout-config">
+							<div class="opt-block">
+								<label>Challenge Type</label>
+								<div class="segmented" role="tablist"><button type="button" class="is-active">Type 1</button><button type="button">Type 2</button></div>
+							</div>
+							<div class="opt-block">
+								<label>Account Size</label>
+								<div class="segmented" role="tablist">
+									<button type="button">$ 10,000</button>
+									<button type="button">$ 25,000</button>
+									<button type="button">$ 50,000</button>
+									<button type="button" class="is-active">$ 100,000</button>
+									<button type="button">$ 200,000</button>
+									<button type="button">$ 300,000</button>
+								</div>
+							</div>
+							<div class="opt-block">
+								<label>Platform</label>
+								<div class="segmented" role="tablist"><button type="button">Platform 4</button><button type="button" class="is-active">Platform 5</button></div>
+							</div>
+							<div class="opt-block">
+								<label>Broker</label>
+								<div class="segmented" role="tablist"><button type="button">Broker 1</button><button type="button" class="is-active">Broker 2</button></div>
+							</div>
+							<div class="opt-block">
+								<label>CFFP Discount</label>
+								<div class="pill-select" style="min-width:280px">None <span class="chev">⌄</span></div>
+							</div>
+
+							<section class="billing">
+								<h2>Billing Info</h2>
+								<div class="field-grid">
+									<div class="field"><label for="firstName">First Name</label><input id="firstName" name="firstName" placeholder="Enter your name"><span class="err" id="firstNameErr"></span></div>
+									<div class="field"><label for="lastName">Last Name</label><input id="lastName" name="lastName" placeholder="Last name"></div>
+									<div class="field"><label for="cuser">Username</label><input id="cuser" name="username" value="@ username"></div>
+									<div class="field"><label for="cemail">Email</label><input id="cemail" name="email" type="email" value="email@email.com"></div>
+									<div class="field"><label for="cphone">Phone</label><input id="cphone" name="phone" value="+961 --------"></div>
+									<div class="field"><label for="caddr">Address</label><input id="caddr" name="address" placeholder="Street name, building, road...."></div>
+									<div class="field"><label for="ccity">City</label><input id="ccity" name="city" placeholder="City name"></div>
+									<div class="field select"><label for="ccountry">Country</label><select id="ccountry" name="country"><option>Lebanon</option><option>United Arab Emirates</option><option>United States</option></select></div>
+									<div class="field"><label for="cstate">State</label><input id="cstate" name="state" placeholder="State / region"></div>
+									<div class="field"><label for="czip">Zip Code</label><input id="czip" name="zip" value="1234"></div>
+								</div>
+							</section>
+						</div>
+
+						<aside class="summary">
+							<h2>Order Summary</h2>
+							<div class="line"><span>Type</span><b>Type 1</b></div>
+							<div class="line"><span>Size</span><b>$100,000</b></div>
+							<div class="line"><span>Platform</span><b>Platform 5</b></div>
+							<div class="line"><span>Broker</span><b>Broker 2</b></div>
+							<div class="promo">
+								<span style="color:var(--muted);text-transform:uppercase;font-size:12px;letter-spacing:.04em">Promo Code</span>
+								<input id="promo" name="promo" value="5372" aria-label="Promo code">
+								<button class="verify" type="button" id="verifyPromo">Verify</button>
+							</div>
+							<div class="line"><span>Discount Amount</span><b>$100</b></div>
+							<div class="total"><span>Total</span><b>$700</b></div>
+							<label class="agree"><input type="checkbox" id="agree"> I agree to the <a class="link-underline" href="#">terms and conditions</a></label>
+							<button class="btn-checkout" type="submit">CHECKOUT</button>
+							<div class="form-err" id="formErr"></div>
+						</aside>
+					</form>
+				</main>
+			</section>
+		</div>
+	</div>
+	<script src="app.js"></script>
+	<script>
+		window.pageInit = function () {
+			const form = document.querySelector('#checkoutForm');
+			const err = document.querySelector('#formErr');
+			const firstName = document.querySelector('#firstName');
+			const firstNameErr = document.querySelector('#firstNameErr');
+			const agree = document.querySelector('#agree');
+
+			document.querySelector('#verifyPromo').addEventListener('click', () => {
+				const code = document.querySelector('#promo').value.trim();
+				window.showStatus(err, code ? 'Promo applied' : 'Enter a promo code', Boolean(code));
+				err.style.color = code ? '#00d99a' : '#ff5a65';
+			});
+
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				let ok = true;
+				if (!firstName.value.trim()) { firstNameErr.textContent = 'Please fill in First Name'; ok = false; }
+				else { firstNameErr.textContent = ''; }
+				if (!agree.checked) ok = false;
+				if (!ok) { err.style.color = '#ff5a65'; err.textContent = 'Error, please fill in the correct fields'; return; }
+				err.textContent = '';
+				window.location.href = 'complete-order.html';
+			});
+		};
+	</script>
+</body>
+</html>

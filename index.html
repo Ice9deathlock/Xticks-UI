@@ -1,101 +1,144 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hyperticks | Profile Settings</title>
+	<title>Hyperticks | Dashboard</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="dashboard">
 	<div class="app">
-		<aside class="sidebar" aria-label="Primary">
-			<div class="brand"><span class="mark" aria-hidden="true"><i></i></span>Hyperticks</div>
-			<nav class="nav">
-				<a href="#">Dashboard</a>
-				<a href="#">Marketplace</a>
-				<a href="#">My Wallet</a>
-				<a href="#">Blog</a>
-				<a href="#">Affiliate</a>
-				<a href="#">Announcements</a>
-				<a href="#">Accounts</a>
-				<a href="#">Leaderboard</a>
-				<a class="active" href="#" aria-current="page">Profile Settings</a>
-				<a href="#">Notifications</a>
-			</nav>
-			<div class="sidebar-actions">
-				<button class="meta" type="button">MetaTrader <span aria-hidden="true">↗</span></button>
-				<button class="challenge" type="button">Start a New Challenge</button>
-				<button class="signout" type="button">SIGN OUT</button>
-			</div>
-		</aside>
-
+		<aside class="sidebar" aria-label="Primary"></aside>
 		<div class="content">
 			<section class="shell">
-				<header class="topbar">
-					<div class="cfp"><strong>CFP: 101</strong><time>00:00:00</time><span>Redeem</span></div>
-					<div class="user"><b>Joe Slim</b><span>|</span>User ID: <b>112436</b></div>
-				</header>
+				<header class="topbar"></header>
+				<main class="page">
+					<div class="page-head">
+						<h1>Dashboard</h1>
+						<button class="share-btn" type="button"><span class="dot"></span>Share Stats ⌄</button>
+					</div>
 
-				<main>
-					<h1>Profile Settings</h1>
-					<section class="profile" aria-label="Profile summary">
-						<div class="identity">
-							<div class="avatar-card">
-								<div class="avatar" aria-hidden="true"></div>
-								<button class="photo" type="button"><span>Change Photo</span><small>Max size: 5MB</small></button>
+					<section class="dash-grid">
+						<article class="card account">
+							<div class="card-head"><h2>Account Details</h2><button type="button">SWITCH ACCOUNT ⌄</button></div>
+							<div class="metrics">
+								<div><span>Type</span><strong>$100,000.00</strong></div>
+								<div><span>Level / Phase</span><strong>Phase 2</strong></div>
+								<div><span>Trading Days</span><strong>6</strong></div>
+								<div><span>Status</span><strong class="ok">Ongoing</strong></div>
 							</div>
-							<dl class="details">
-								<div><dt>Name</dt><dd>Full Name</dd></div>
-								<div><dt>Username</dt><dd>@username</dd></div>
-								<div><dt>Email</dt><dd>email@email.com</dd></div>
-								<div><dt>Account created on</dt><dd>August 25th, 2023</dd></div>
-							</dl>
+							<div class="foot">
+								<div><b>Account succeeded and passed to phase 2</b><span>AUG. 8 2023</span></div>
+								<div><span>Account ID: 124921-UJD</span><b>•••</b></div>
+							</div>
+						</article>
+
+						<article class="card npl">
+							<h2>Net Profit / Loss</h2>
+							<strong class="big">- $1,000.00</strong>
+							<span class="tag-red">↗ 100%</span>
+							<div class="npl-actions">
+								<button type="button">Apply Booster</button>
+								<div class="pill-select">NONE <span class="chev">⌄</span></div>
+							</div>
+						</article>
+
+						<article class="card mini"><span>Balance</span><strong>$99,000.00</strong></article>
+						<article class="card mini"><span>Equity</span><strong>$99,000.00</strong></article>
+						<article class="card mini wide"><span>Target profit</span><div class="bar"><strong>$5,000.00</strong><i></i></div></article>
+
+						<article class="card share-card">
+							<h2>Profit Share</h2>
+							<strong class="big">---</strong>
+							<p>Complete challenges 1 &amp; 2 to become a funded trader, and make profits</p>
+						</article>
+
+						<article class="card mini wide"><span>Max Equity Stop Out</span><strong>$88,000.00</strong></article>
+						<article class="card mini wide"><span>Daily Loss Limit</span><div class="bar danger"><strong>$5,000.00</strong><i></i></div></article>
+					</section>
+
+					<section class="card today">
+						<div class="card-head"><h2>Activity for Today</h2><span>Last updated on dd/mm/yyyy</span></div>
+						<div class="today-grid">
+							<div><span>Starting Balance</span><strong>$102,000.00</strong></div>
+							<div><span>Starting Equity</span><strong>$102,000.00</strong></div>
+							<div><span>Max Drawdown</span><strong>$97,000.00</strong></div>
+							<div><span>Profit / Loss</span><strong>-$3,000.00</strong><em>↘ 0.00%</em></div>
 						</div>
-						<aside class="kyc">
-							<div class="kyc-label">KYC Status</div>
-							<h2>To be verified</h2>
-							<button class="pill" type="button">SUBMIT KYC</button>
-						</aside>
 					</section>
 
-					<section class="section" aria-labelledby="personal-title">
-						<h2 id="personal-title">Personal Info</h2>
-						<form id="personalForm">
-							<div class="grid">
-								<div class="field"><label for="phone">Phone</label><input id="phone" name="phone" autocomplete="tel" placeholder="Enter Phone Number"></div>
-								<div class="field"><label for="address">Address</label><input id="address" name="address" autocomplete="street-address" placeholder="Enter address details"></div>
-								<div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" value="Beirut"></div>
-								<div class="field select"><label for="country">Country</label><select id="country" name="country" autocomplete="country-name"><option value="">Select Country</option><option>Lebanon</option><option>United Arab Emirates</option><option>United States</option></select></div>
-								<div class="field"><label for="state">State</label><input id="state" name="state" autocomplete="address-level1" placeholder="State / Region"></div>
-								<div class="field"><label for="zip">Zip Code</label><input id="zip" name="zip" autocomplete="postal-code" value="12345"></div>
+					<section class="card activity">
+						<div class="activity-head">
+							<div><h2>Activity</h2><span>Updated on AUG. 8 2023</span></div>
+							<div class="segmented" role="tablist">
+								<button type="button">Hourly</button>
+								<button type="button">Daily</button>
+								<button type="button" class="is-active">Weekly</button>
 							</div>
-							<div class="actions">
-								<button class="save" type="submit">Save Changes</button>
-								<div class="status-message" role="status" aria-live="polite">Changes saved (temporary message goes here? Green for success, red for error)</div>
-							</div>
-						</form>
+						</div>
+						<div class="chart">
+							<svg viewBox="0 0 900 300" role="img" aria-label="Equity and balance over time">
+								<defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1">
+									<stop offset="0" stop-color="#00d89a" stop-opacity=".36"/>
+									<stop offset="1" stop-color="#00d89a" stop-opacity=".03"/>
+								</linearGradient></defs>
+								<g class="gridlines"><path d="M0 30H900M0 75H900M0 120H900M0 165H900M0 210H900M0 255H900"/></g>
+								<path class="area" d="M0 220 C60 145 115 128 170 140 C245 157 252 80 315 67 C355 62 367 150 420 202 C486 267 560 228 605 165 C675 64 760 69 828 119 C860 142 881 151 900 154 L900 300 L0 300 Z"/>
+								<path class="line gray" d="M0 268 C56 153 126 121 191 139 C260 158 263 73 315 53 C361 35 371 158 422 221 C488 297 556 248 605 165 C671 57 740 51 807 98 C847 126 865 143 900 147"/>
+								<path class="line green" d="M0 220 C58 152 113 129 178 136 C244 143 260 112 300 69 C346 17 366 138 428 187 C494 241 565 240 610 174 C672 105 735 87 807 117 C848 134 869 148 900 156"/>
+								<g class="axis">
+									<text x="2" y="292">0</text><text x="42" y="292">1</text><text x="82" y="292">2</text><text x="122" y="292">3</text><text x="162" y="292">4</text><text x="202" y="292">5</text><text x="242" y="292">6</text><text x="282" y="292">7</text><text x="322" y="292">8</text><text x="362" y="292">9</text><text x="402" y="292">10</text><text x="442" y="292">11</text><text x="482" y="292">12</text><text x="522" y="292">13</text><text x="562" y="292">14</text><text x="602" y="292">15</text><text x="642" y="292">16</text><text x="682" y="292">17</text><text x="722" y="292">18</text><text x="762" y="292">19</text><text x="802" y="292">20</text><text x="842" y="292">21</text><text x="882" y="292">22</text>
+									<text x="888" y="257">0</text><text x="884" y="212">10</text><text x="884" y="167">20</text><text x="884" y="122">30</text><text x="884" y="77">40</text><text x="884" y="32">60</text>
+								</g>
+								<g class="tip">
+									<rect x="480" y="118" width="104" height="76" rx="4"/>
+									<text x="532" y="143" text-anchor="middle">Equity:</text>
+									<text x="532" y="160" text-anchor="middle">Balance:</text>
+									<text x="532" y="177" text-anchor="middle">date/time</text>
+								</g>
+								<circle class="dot" cx="532" cy="210" r="6"/>
+							</svg>
+						</div>
 					</section>
 
-					<section class="section password" aria-labelledby="password-title">
-						<h2 id="password-title">Update Password</h2>
-						<form id="passwordForm">
-							<div class="password-grid">
-								<div class="field"><label for="current-password">Current Password</label><input id="current-password" name="current-password" type="password" autocomplete="current-password" placeholder="Enter password"></div>
-								<div class="password-stack">
-									<div class="field"><label for="new-password">New Password</label><input id="new-password" name="new-password" type="password" autocomplete="new-password" placeholder="Type new password"></div>
-									<div class="field"><label for="confirm-password">Confirm Password</label><input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Enter new password again"></div>
-									<div class="actions"><button class="save" type="submit">Save Changes</button></div>
-								</div>
-							</div>
-						</form>
+					<section class="section statlist">
+						<h2>Trading Stats</h2>
+						<div class="row"><span>STARTING BALANCE</span><strong>$50,000<sub>.00</sub></strong></div>
+						<div class="row"><span>CURRENT BALANCE</span><strong>$66,242<sub>.68</sub></strong></div>
+						<div class="row"><span>CURRENT EQUITY</span><strong>$66,242<sub>.68</sub></strong></div>
+						<div class="row"><span>CUMULATIVE PNL</span><strong>$16,242<sub>.68</sub></strong></div>
+						<div class="row"><span>% RETURN</span><strong>32<sub>.49</sub></strong></div>
+						<div class="row"><span>ACTIVE DAYS</span><strong>7</strong></div>
+						<div class="row"><span>AVG. WINNING TRADE</span><strong>$563<sub>.40</sub></strong></div>
+						<div class="row"><span>PROFIT FACTOR</span><strong>1<sub>.78</sub></strong></div>
+						<div class="row"><span>WINNING TRADE PCT</span><strong>66<sub>.00</sub></strong></div>
+						<div class="row"><span>TOTAL NO. TRADES</span><strong>101</strong></div>
+					</section>
+
+					<section class="card table-card history-table">
+						<div class="card-head"><h2>Trading History</h2><span>Last updated on dd/mm/yyyy</span></div>
+						<div class="table-wrap">
+							<table class="data">
+								<thead><tr><th>Ticket #</th><th>Type</th><th>Open Time</th><th>Close Time</th><th>Symbol</th><th>Lots</th><th>Net Profit</th></tr></thead>
+								<tbody>
+									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
+									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
+									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
+									<tr class="accent"><td>---</td><td>1% Booster</td><td>2023-10-04</td><td>---</td><td>---</td><td>---</td><td>+$1,000.00</td></tr>
+									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
+									<tr><td>18502561</td><td>Sell</td><td>2023-10-04</td><td>2023-10-04</td><td>XAUUSD</td><td>0.21</td><td>+$225.75</td></tr>
+								</tbody>
+							</table>
+						</div>
+						<button class="expand" type="button">Expand History ⌄</button>
 					</section>
 				</main>
 			</section>
 		</div>
 	</div>
-	<script src="script.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>
