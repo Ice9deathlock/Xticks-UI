@@ -353,7 +353,7 @@ h1, h2, h3, p { margin: 0; }
 .community { text-align: center; }
 .discord-card { position: relative; max-width: 700px; margin: 0 auto; padding: 40px 24px; border-radius: 30px; background: rgba(0,0,0,.05); overflow: hidden; box-shadow: 0 0 0 1px rgba(255,255,255,.05) inset; }
 .discord-card::before { content: ""; position: absolute; inset: -30% -10% auto; height: 300px; background: radial-gradient(circle at 50% 0, rgba(6,255,192,.18), transparent 60%); }
-.discord-orb { position: relative; width: 90px; height: 90px; margin: 0 auto 18px; display: grid; place-items: center; border-radius: 24px; background: rgba(6,255,192,.12); font-size: 44px; }
+.discord-orb { position: relative; display: block; width: 120px; height: 120px; margin: 0 auto 14px; object-fit: contain; filter: drop-shadow(0 0 18px rgba(6,255,192,.4)); }
 .discord-card h2 { position: relative; font-size: 40px; font-weight: 500; margin-bottom: 22px; }
 .discord-cta { position: relative; margin: 6px; }
 
