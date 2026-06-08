@@ -3,128 +3,453 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hyperticks | Trade All Markets</title>
+	<title>Hyperticks | Futures Prop Trading Made Accessible</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-	<header class="ticker" aria-label="Market ticker">
-		<span>ES</span><strong>6495.25 +0.48%</strong><span>NQ</span><strong>19322.00 +0.62%</strong><span>CL</span><strong>73.20 +0.31%</strong><span>GC</span><strong>2334.50 +0.27%</strong><span>6E</span><strong>1.0862 +0.18%</strong>
+
+	<!-- Promo ticker -->
+	<div class="ticker" aria-hidden="true">
+		<div class="ticker__track">
+			<span class="ticker__item">50% OFF + BOGO &nbsp;·&nbsp; <span class="chip">USE CODE: <b>BOGO</b></span></span>
+			<span class="ticker__item">50% OFF + BOGO &nbsp;·&nbsp; <span class="chip">USE CODE: <b>BOGO</b></span></span>
+			<span class="ticker__item">50% OFF + BOGO &nbsp;·&nbsp; <span class="chip">USE CODE: <b>BOGO</b></span></span>
+			<span class="ticker__item">50% OFF + BOGO &nbsp;·&nbsp; <span class="chip">USE CODE: <b>BOGO</b></span></span>
+			<span class="ticker__item">50% OFF + BOGO &nbsp;·&nbsp; <span class="chip">USE CODE: <b>BOGO</b></span></span>
+			<span class="ticker__item">50% OFF + BOGO &nbsp;·&nbsp; <span class="chip">USE CODE: <b>BOGO</b></span></span>
+		</div>
+	</div>
+
+	<!-- Nav -->
+	<header class="nav">
+		<div class="container nav__inner">
+			<a class="brand" href="#top">Hyper<span>ticks</span></a>
+			<nav class="nav__links" aria-label="Primary">
+				<a href="#programs">Programs</a>
+				<a href="#features">Features</a>
+				<a href="#compare">Compare</a>
+				<a href="#faq">FAQ</a>
+				<a href="index.html">Login</a>
+			</nav>
+			<a class="btn btn--accent nav__cta" href="marketplace.html">Get Started</a>
+		</div>
 	</header>
 
-	<nav class="site-nav" aria-label="Main navigation">
-		<a href="#fx">FX</a>
-		<a href="#programs">Futures</a>
-		<a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>Hyperticks</span></a>
-		<div class="nav-links">
-			<a href="#about">About Us</a><a href="#announcements">Announcements</a><a href="#faq">FAQs</a><a href="index.html">Login</a><a href="#contact">Contact</a><a class="outline-button" href="marketplace.html">Get started</a>
+	<!-- Hero -->
+	<section class="hero" id="top">
+		<div class="hero__bg" aria-hidden="true"></div>
+		<div class="container hero__inner">
+			<div class="trustpilot">★ Excellent <b>Trustpilot</b></div>
+			<h1 class="hero__title">
+				<span class="rotator" data-rotate>
+					<span class="rotator__item is-active">Futures prop <em>trading made accessible</em></span>
+					<span class="rotator__item">Scale Your <em>Trading Capital</em></span>
+					<span class="rotator__item">Trade With <em>Professional Platforms</em></span>
+				</span>
+			</h1>
+			<p class="hero__sub">
+				<span class="rotator" data-rotate>
+					<span class="rotator__item is-active">Prove your trading edge and unlock up to 100% reward share with fast performance rewards.</span>
+					<span class="rotator__item">Start your journey and scale your account up to $450K in funded capital with a clear growth path.</span>
+					<span class="rotator__item">Connect with powerful platforms like ATAS, Quantower, NinjaTrader, and DeepMap for advanced trading.</span>
+				</span>
+			</p>
+			<div class="hero__cta">
+				<a class="btn btn--solid" href="marketplace.html">Get Started</a>
+				<a class="btn btn--ghost" href="#">Join Discord</a>
+			</div>
 		</div>
-	</nav>
+	</section>
 
-	<main id="top">
-		<section class="hero section" aria-labelledby="hero-title">
-			<div class="neon-rails left" aria-hidden="true"></div>
-			<div class="neon-rails right" aria-hidden="true"></div>
-			<p class="eyebrow">Prop firm access for focused traders</p>
-			<h1 id="hero-title">Trade All <span>Markets</span><br>With One Firm</h1>
-			<p class="hero-copy">Hyperticks is the first futures evaluation firm to ship both FX bridging and futures access through one clean path. Trade, pass, and get rewarded.</p>
-			<div class="hero-actions"><a class="primary-button" href="marketplace.html">Get Started</a><a class="ghost-button" href="#discord">Join Discord</a></div>
-			<div class="market-pills"><span>10K</span><span>50K</span><span>100K</span><span>300K</span></div>
-			<div class="trust-pill"><strong>4.5/5</strong><span>Trustpilot Rated</span></div>
-		</section>
+	<!-- Trusted -->
+	<section class="section trusted">
+		<div class="container center">
+			<p class="tag center-pill">100K+ Rewarded Monthly</p>
+			<h2 class="gradient-text section__title center">Trusted By 10,000+ Traders</h2>
+		</div>
+	</section>
 
-		<section class="section features" id="about" aria-labelledby="features-title">
-			<p class="chip">Why Hyperticks</p>
-			<h2 id="features-title">Exclusive Hyperticks <span>Features</span></h2>
-			<div class="feature-grid">
-				<article><i>%</i><h3>Futures + FX in One Firm</h3><p>Access multiple markets with one account system, one dashboard, and one reward flow.</p></article>
-				<article><i>24</i><h3>24-Hour Support</h3><p>Get quick help whenever a program or platform question comes up.</p></article>
-				<article><i>★</i><h3>Reward System HPT</h3><p>Earn points, unlock perks, and use loyalty rewards as you keep trading.</p></article>
-				<article><i>♙</i><h3>Best Instant Programs</h3><p>Pick instant access when speed matters and evaluation programs when structure matters.</p></article>
+	<!-- Recent Rewards -->
+	<section class="section rewards">
+		<div class="container">
+			<h2 class="gradient-text section__title center">Recent Rewards</h2>
+			<div class="rewards__grid">
+				<div class="reward"><span class="reward__coin">$</span><div><b>John Elliss</b><span class="reward__amt">$2800</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Adrian Sowandi</b><span class="reward__amt">$4200</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Slade Gorman</b><span class="reward__amt">$8400</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Rudy Helou</b><span class="reward__amt">$2500</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Chum Yit</b><span class="reward__amt">$3000</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Abidexx Slawek</b><span class="reward__amt">$3500</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Jae Kim</b><span class="reward__amt">$2100</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Collin Jackson</b><span class="reward__amt">$6300</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Arnold Felamon</b><span class="reward__amt">$7000</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Varun Chatterjee</b><span class="reward__amt">$1700</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Oliver Laurent</b><span class="reward__amt">$3850</span></div></div>
+				<div class="reward"><span class="reward__coin">$</span><div><b>Matthew Radacz</b><span class="reward__amt">$1400</span></div></div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section class="section metrics" aria-label="Platform metrics">
-			<div><strong>10K</strong><span>Traders</span></div><div><strong>$100K+</strong><span>In Rewards Monthly</span></div><div><strong>$10.4K</strong><span>Highest Reward</span></div><div><strong>24/7</strong><span>Support</span></div><div><strong>4.5/5</strong><span>Trustpilot</span></div>
-		</section>
+	<!-- 3 Easy Steps -->
+	<section class="section steps">
+		<div class="container steps__head">
+			<p class="tag">3 Easy Steps</p>
+			<h2 class="gradient-text section__title">The Fast Track to becoming a<br>Hyperticks Trader</h2>
+			<a class="badge-pill" href="marketplace.html">Get Started Today</a>
+		</div>
+		<div class="container steps__grid">
+			<article class="step-card">
+				<div class="step-card__icon">🖱️</div>
+				<p class="step-card__num">Step 1</p>
+				<h3>Choose Your Program</h3>
+				<p>Prove your edge with our Evaluation programs or skip the wait and get direct access through Instant Programs. Our four programs are built for every trader, at every stage.</p>
+			</article>
+			<article class="step-card">
+				<div class="step-card__icon">📈</div>
+				<p class="step-card__num">Step 2</p>
+				<h3>Get Rewarded</h3>
+				<p>Start trading your simulated account and earn rewards as you go. Meet performance targets and keep up to 90% of your first $10,000.</p>
+			</article>
+			<article class="step-card">
+				<div class="step-card__icon">🤝</div>
+				<p class="step-card__num">Step 3</p>
+				<h3>Live Analyst</h3>
+				<p>Top performers are handpicked for a private interview. Our risk team builds a custom plan with exclusive terms, tailored rules, and full support to scale your strategy.</p>
+			</article>
+		</div>
+	</section>
 
-		<section class="section rewards" id="announcements" aria-labelledby="rewards-title">
-			<h2 id="rewards-title">Recent Rewards</h2>
-			<div class="reward-cloud"><span>$500</span><span>$500</span><span>$1500</span><span>$1000</span><span>$7000</span><span>$3800</span><span>$2500</span><span>$1750</span><span>$300</span><span>$1000</span><span>$375</span><span>$2400</span><span>$900</span><span>$3450</span><span>$2500</span></div>
-		</section>
+	<!-- Unique Selling Points -->
+	<section class="section usp" id="features">
+		<div class="container center">
+			<p class="tag center-pill">Unique Features</p>
+			<h2 class="gradient-text usp__title">Unlock your edge with Hyperticks Exclusive Trader Benefits</h2>
+		</div>
+		<div class="container usp__grid">
+			<article class="usp-card usp-card--feature">
+				<div class="usp-card__icon">🎟️</div>
+				<h3 class="gradient-text">Booster Token</h3>
+				<p>Recover from tough sessions instantly. Use a 1–4% token to erase losses, reclaim your edge, and keep momentum strong. Available on Challenges and Sim Funded accounts for uninterrupted progress and opportunity in every session.</p>
+			</article>
+			<article class="usp-card">
+				<div class="usp-card__icon">🔓</div>
+				<h3 class="gradient-text">Skip Evals With No Consistency Rule</h3>
+				<p>No need to pass anymore evaluations. With our instant program, skip evals to sim funded phase. Accelerate your path to rewards with no delays or extra steps.</p>
+			</article>
+			<article class="usp-card">
+				<div class="usp-card__icon">⚡</div>
+				<h3 class="gradient-text">On Demand Rewards</h3>
+				<p>Available on all programs. Follow the rules, meet targets, and request your reward instantly.</p>
+			</article>
+			<article class="usp-card">
+				<div class="usp-card__icon">🪙</div>
+				<h3 class="gradient-text">Power Up With HTP</h3>
+				<p>HTP is the loyalty coin of Hyperticks. Stay active in the community to earn rewards, level up, and unlock powerful perks. Use HTP as your internal payment system for products, services, and exclusive discounts.</p>
+			</article>
+			<article class="usp-card">
+				<div class="usp-card__icon">💰</div>
+				<h3 class="gradient-text">Up to 90% Split</h3>
+				<p>Keep up to 90% of the rewards on Hyperticks accounts.</p>
+			</article>
+		</div>
+	</section>
 
-		<section class="section programs" id="programs" aria-labelledby="programs-title">
-			<h2 id="programs-title">Choose Your Program</h2>
-			<div class="segment" role="tablist"><button class="is-active" type="button">FX</button><button type="button">Futures</button></div>
-			<p class="subhead">Evaluation programs</p>
-			<div class="steps"><span>1 Step</span><span class="is-active">2 Step</span><span>Hyper Instant</span><span>Instant</span></div>
-			<div class="pricing-grid">
-				<article class="program-card"><h3>$5K</h3><p>1 Step</p><ul><li>Target <b>7%</b></li><li>Daily loss <b>3%</b></li><li>Max loss <b>6%</b></li><li>Drawdown <b>Static</b></li><li>Consistency <b>None</b></li></ul><strong>$55</strong><button type="button" onclick="location.href='checkout.html'">Start Program</button></article>
-				<article class="program-card"><h3>$10K</h3><p>1 Step</p><ul><li>Target <b>7%</b></li><li>Daily loss <b>3%</b></li><li>Max loss <b>6%</b></li><li>Drawdown <b>Static</b></li><li>Consistency <b>None</b></li></ul><strong>$110</strong><button type="button" onclick="location.href='checkout.html'">Start Program</button></article>
-				<article class="program-card"><h3>$25K</h3><p>1 Step</p><ul><li>Target <b>7%</b></li><li>Daily loss <b>3%</b></li><li>Max loss <b>6%</b></li><li>Drawdown <b>Static</b></li><li>Consistency <b>None</b></li></ul><strong>$250</strong><button type="button" onclick="location.href='checkout.html'">Start Program</button></article>
-				<article class="program-card"><h3>$50K</h3><p>1 Step</p><ul><li>Target <b>7%</b></li><li>Daily loss <b>3%</b></li><li>Max loss <b>6%</b></li><li>Drawdown <b>Static</b></li><li>Consistency <b>None</b></li></ul><strong>$400</strong><button type="button" onclick="location.href='checkout.html'">Start Program</button></article>
-				<article class="program-card featured"><small>Popular</small><h3>$100K</h3><p>1 Step</p><ul><li>Target <b>7%</b></li><li>Daily loss <b>3%</b></li><li>Max loss <b>6%</b></li><li>Drawdown <b>Static</b></li><li>Consistency <b>None</b></li></ul><strong>$775</strong><button type="button" onclick="location.href='checkout.html'">Start Program</button></article>
+	<!-- Programs -->
+	<section class="section programs" id="programs">
+		<div class="container center">
+			<p class="tag center-pill">Programs</p>
+			<h2 class="gradient-text section__title center">Choose Your Program</h2>
+		</div>
+		<div class="container">
+			<div class="seg" role="tablist">
+				<button class="seg__tab is-active" role="tab"><span class="seg__num">1</span> Beginner</button>
+				<button class="seg__tab" role="tab"><span class="seg__num">2</span> Hyper</button>
+				<button class="seg__tab" role="tab"><span class="seg__num">3</span> Instant Pro</button>
+				<button class="seg__tab" role="tab"><span class="seg__num">4</span> Instant Pro+</button>
 			</div>
-			<div class="coupon"><strong>50% OFF - BOOO</strong><span>BLOGO50</span></div>
-		</section>
+		</div>
+		<div class="container price__grid">
+			<!-- 25K -->
+			<article class="price-card">
+				<div class="price-card__head">
+					<span class="price-card__size gradient-accent">$25K</span>
+					<span class="price-card__plan">Beginner</span>
+				</div>
+				<dl class="price-card__rows">
+					<div><dt>Reset</dt><dd>$49</dd></div>
+					<div><dt>Target</dt><dd>$1,250</dd></div>
+					<div><dt>Daily Loss Limit</dt><dd>$500</dd></div>
+					<div><dt>Maximum Loss Limit</dt><dd>$1,000</dd></div>
+					<div><dt>Drawdown Mode</dt><dd>End Of Day</dd></div>
+					<div><dt>Consistency</dt><dd>35%</dd></div>
+					<div><dt>Maximum Size</dt><dd>1 minis (10 Micros)</dd></div>
+					<div><dt>Activation Fee</dt><dd class="ok">Free</dd></div>
+					<div><dt>Booster</dt><dd class="ok">Available ✓</dd></div>
+					<div><dt class="strong">Industry’s Lowest Target</dt><dd></dd></div>
+				</dl>
+				<div class="price-card__price"><span class="was">$99</span> <span class="now">$49</span></div>
+				<div class="price-card__cta">
+					<a class="btn btn--outline" href="checkout.html">Sim Funded</a>
+					<a class="btn btn--accent" href="marketplace.html">Start Trading Now</a>
+				</div>
+			</article>
+			<!-- 50K featured -->
+			<article class="price-card price-card--featured">
+				<div class="price-card__head">
+					<span class="price-card__size gradient-accent">$50K</span>
+					<span class="price-card__plan">Beginner</span>
+				</div>
+				<dl class="price-card__rows">
+					<div><dt>Reset</dt><dd>$74</dd></div>
+					<div><dt>Target</dt><dd>$2,500</dd></div>
+					<div><dt>Daily Loss Limit</dt><dd>$1,000</dd></div>
+					<div><dt>Maximum Loss Limit</dt><dd>$2,125</dd></div>
+					<div><dt>Drawdown Mode</dt><dd>End Of Day</dd></div>
+					<div><dt>Consistency</dt><dd>35%</dd></div>
+					<div><dt>Maximum Size</dt><dd>3 minis (30 Micros)</dd></div>
+					<div><dt>Activation Fee</dt><dd class="ok">None</dd></div>
+					<div><dt>Booster</dt><dd class="ok">Available ✓</dd></div>
+					<div><dt class="strong">Industry’s Lowest Target</dt><dd></dd></div>
+				</dl>
+				<div class="price-card__price"><span class="was">$149</span> <span class="now">$74</span></div>
+				<div class="price-card__cta">
+					<a class="btn btn--outline" href="checkout.html">Sim Funded</a>
+					<a class="btn btn--accent" href="marketplace.html">Start Trading Now</a>
+				</div>
+			</article>
+			<!-- 100K -->
+			<article class="price-card">
+				<div class="price-card__head">
+					<span class="price-card__size gradient-accent">$100K</span>
+					<span class="price-card__plan">Beginner</span>
+				</div>
+				<dl class="price-card__rows">
+					<div><dt>Reset</dt><dd>$149</dd></div>
+					<div><dt>Target</dt><dd>$5,000</dd></div>
+					<div><dt>Daily Loss Limit</dt><dd>$2,000</dd></div>
+					<div><dt>Maximum Loss Limit</dt><dd>$3,250</dd></div>
+					<div><dt>Drawdown Mode</dt><dd>End Of Day</dd></div>
+					<div><dt>Consistency</dt><dd>35%</dd></div>
+					<div><dt>Maximum Size</dt><dd>6 minis (60 Micros)</dd></div>
+					<div><dt>Activation Fee</dt><dd class="ok">None</dd></div>
+					<div><dt>Booster</dt><dd class="ok">Available ✓</dd></div>
+					<div><dt class="strong">Industry’s Lowest Target</dt><dd></dd></div>
+				</dl>
+				<div class="price-card__price"><span class="was">$300</span> <span class="now">$150</span></div>
+				<div class="price-card__cta">
+					<a class="btn btn--outline" href="checkout.html">Sim Funded</a>
+					<a class="btn btn--accent" href="marketplace.html">Start Trading Now</a>
+				</div>
+			</article>
+		</div>
+	</section>
 
-		<section class="section how" aria-labelledby="how-title">
-			<h2 id="how-title">How It Works</h2><p class="subhead">Choose your program</p>
-			<div class="how-grid"><article><small>Step 1</small><i>◎</i><h3>Choose your program</h3><p>Pick the account size and challenge model that fits how you trade.</p></article><article><small>Step 2</small><i>◒</i><h3>Claim 80% Split</h3><p>Meet the objectives, receive credentials, and request rewards with a clean split.</p></article></div>
-		</section>
-
-		<section class="section testimonials" aria-label="Trader testimonials">
-			<article><h3>Elvis Finch</h3><p>Great FX and futures access. The program rules are direct and the dashboard makes the next step obvious.</p><b>”</b></article>
-			<article class="is-active"><h3>Ralph Turner</h3><p>Support was quick and the evaluation felt practical. Hyperticks is now my main prop path.</p><b>”</b></article>
-			<article><h3>Sophia</h3><p>Fast setup, clear targets, and reward requests that feel refreshingly straightforward.</p><b>”</b></article>
-		</section>
-
-		<section class="section comparison" aria-labelledby="comparison-title">
-			<h2 id="comparison-title">Hyperticks Compared to Others</h2>
-			<div class="compare-wrap">
-				<div class="compare-card hyperticks"><h3>Hyperticks</h3><p><span>Instant With No Consistency</span><b>Available</b></p><p><span>Target</span><b>7%</b></p><p><span>Evaluation Fee</span><b>Starting at $50</b></p><p><span>Booster On All Stages</span><b>Available</b></p><p><span>Copy Support</span><b>Available</b></p><p><span>Reward Processing</span><b>Fast</b></p><p><span>Markets</span><b>2</b></p></div>
-				<div class="compare-card"><h3>Others</h3><p><span>Instant With No Consistency</span><b>Not Available</b></p><p><span>Target</span><b>10%</b></p><p><span>Evaluation Fee</span><b>Starting at $150</b></p><p><span>Booster On All Stages</span><b>Not Available</b></p><p><span>Copy Support</span><b>Not Available</b></p><p><span>Reward Processing</span><b>Slow</b></p><p><span>Markets</span><b>1</b></p></div>
+	<!-- Hedge Fund Experience -->
+	<section class="section hedge">
+		<div class="container hedge__top">
+			<h2 class="gradient-text hedge__title">The hedge fund experience from your trading desk.</h2>
+			<p class="hedge__lead">Hyperticks was founded by hedge fund managers on a mission to bring the same experience and opportunities they had to traders around the world delivering real market edge through simulated trader-friendly programs and advanced tools like the Booster, all designed to maximize performance and consistency.</p>
+		</div>
+		<div class="container hedge__grid">
+			<div class="hedge-stat">
+				<span class="hedge-stat__num gradient-accent">126+</span>
+				<span class="hedge-stat__label">Countries</span>
 			</div>
-		</section>
+			<article class="hedge-card">
+				<div class="quote-mark">”</div>
+				<p>We don't just talk ethics, we live them, ensuring every move resonates with our unwavering standards.</p>
+				<h3>We mean every word we say</h3>
+			</article>
+			<article class="hedge-card">
+				<h3>Our traders come first, always</h3>
+				<p>With a flair for distinction and ambition of steel, we elevate our clients' aspirations and achievements above all else.</p>
+			</article>
+			<article class="hedge-card hedge-card--review">
+				<h3>What Our Traders Say About Us</h3>
+				<div class="stars">★★★★★</div>
+				<p>Hyperticks is one of the best prop firms out in the game right now, you cannot go wrong with. There instant accounts and there set of rules. They make it accessible for any kind of transfer from new to experienced, unprofitable to profitable. Hyperticks is the way 🙏🏽</p>
+				<div class="reviewer"><span class="reviewer__bar"></span> Devin</div>
+			</article>
+		</div>
+	</section>
 
-		<section class="section faq" id="faq" aria-labelledby="faq-title">
-			<p class="chip">FAQs</p><h2 id="faq-title">Frequently Asked Questions</h2>
-			<div class="faq-list">
-				<details open><summary>What Hyperticks Markets do you support?</summary><p>We support futures and FX-style programs through a unified Hyperticks account experience.</p></details>
-				<details><summary>Do you offer free giveaways?</summary><p>Promotions appear through community campaigns and official announcements.</p></details>
-				<details><summary>What is reward processing?</summary><p>Eligible traders can request rewards from their dashboard after meeting program requirements.</p></details>
-				<details><summary>How is the support?</summary><p>Support is available around the clock through the help desk and community channels.</p></details>
-				<details><summary>What is the broker for the program?</summary><p>Broker and platform details are confirmed during checkout for the selected program.</p></details>
+	<!-- Comparison -->
+	<section class="section compare" id="compare">
+		<div class="container center">
+			<h2 class="gradient-text section__title center">Hyperticks Compared to Others</h2>
+		</div>
+		<div class="container compare__grid">
+			<div class="compare-card compare-card--us">
+				<div class="compare-card__head accent">Hyperticks</div>
+				<dl>
+					<div><dt>Drawdown Type</dt><dd>End Of Day</dd></div>
+					<div><dt>Target</dt><dd>5%</dd></div>
+					<div><dt>Activation Fee</dt><dd>None</dd></div>
+					<div><dt>Evaluation Fee</dt><dd>Starting at $50</dd></div>
+					<div><dt>Reward</dt><dd>On Demand</dd></div>
+					<div><dt>Boosters</dt><dd>On All Stages</dd></div>
+					<div><dt>Programs With No Consistency</dt><dd>Available</dd></div>
+				</dl>
 			</div>
-		</section>
+			<div class="compare-card compare-card--them">
+				<div class="compare-card__head">Others</div>
+				<dl>
+					<div><dt>Drawdown Type</dt><dd>Intraday</dd></div>
+					<div><dt>Target</dt><dd>6%</dd></div>
+					<div><dt>Activation Fee</dt><dd>Starting at $140</dd></div>
+					<div><dt>Evaluation Fee</dt><dd>Starting at $100</dd></div>
+					<div><dt>Reward</dt><dd>Biweekly</dd></div>
+					<div><dt>Boosters</dt><dd>Not Available</dd></div>
+					<div><dt>Programs With No Consistency</dt><dd>Not Available</dd></div>
+				</dl>
+			</div>
+		</div>
+	</section>
 
-		<section class="section community" id="discord"><div class="discord-orb" aria-hidden="true">☁</div><h2>Join our Community</h2><a class="primary-button small" href="#contact">Join Hyperticks Discord</a></section>
+	<!-- Membership Benefits -->
+	<section class="section membership">
+		<div class="container membership__grid">
+			<div class="membership__text">
+				<p class="tag">Membership Benefits</p>
+				<h2 class="gradient-text section__title">From Hedge Funds to Your Trading Desk</h2>
+				<p class="membership__lead">With over 30 years of hedge-fund management experience, we've built Hyperticks on institutional-grade rules and risk controls. Our mission is simple: find the world’s top traders and give them the chance to become full-time traders with Hyperticks.</p>
+				<ul class="membership__pills">
+					<li>→ Unique Programs</li>
+					<li>→ Trader First Approach</li>
+					<li>→ No Hidden Rules</li>
+				</ul>
+				<div class="membership__cta">
+					<a class="badge-pill" href="marketplace.html">Get Started</a>
+					<a class="badge-pill badge-pill--muted" href="#">Testimonials</a>
+				</div>
+			</div>
+			<div class="membership__art" aria-hidden="true">
+				<div class="membership__globe">🌐</div>
+			</div>
+		</div>
+	</section>
 
-		<footer class="footer" id="contact">
-			<div><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>Hyperticks</span></a><p>Be a pro. Stay funded.</p><p>support@hyperticks.com</p></div>
-			<div><h3>About</h3><a href="#about">About Us</a><a href="#faq">FAQs</a><a href="#announcements">Announcements</a><a href="#contact">Contact</a></div>
-			<div><h3>Join Our Newsletter</h3><form onsubmit="return false"><input type="email" placeholder="Enter your email"><button type="submit">Send</button></form><p class="socials">in X f ◐ ▶</p></div>
-		</footer>
+	<!-- FAQ -->
+	<section class="section faq" id="faq">
+		<div class="container center">
+			<p class="tag center-pill">FAQs</p>
+			<h2 class="gradient-text section__title center">Frequently Asked Questions</h2>
+		</div>
+		<div class="container faq__list">
+			<details open>
+				<summary>What Payout Methods Are Accepted?</summary>
+				<div class="faq__body">
+					<p>We currently offer two payout methods:</p>
+					<ol><li>Digital Currency</li><li>Rise</li></ol>
+					<p>You can choose your preferred method when requesting your payout. If you need help with either option, feel free to contact our support team.</p>
+				</div>
+			</details>
+			<details><summary>Supported Platforms?</summary>
+				<div class="faq__body"><p>We support ATAS, Quantower, NinjaTrader and DeepMap.</p></div>
+			</details>
+			<details><summary>Why Choose HyperTicks?</summary>
+				<div class="faq__body"><p>Unique programs, a trader-first approach and no hidden rules — built on 30+ years of hedge-fund experience.</p></div>
+			</details>
+			<details><summary>What Are HTP Tokens?</summary>
+				<div class="faq__body"><p>HTP is the loyalty coin of Hyperticks, used to earn rewards and unlock exclusive perks and discounts.</p></div>
+			</details>
+			<details><summary>How to Acquire HTP Tokens?</summary>
+				<div class="faq__body"><p>Stay active in the community, level up and complete activities to earn HTP.</p></div>
+			</details>
+			<details><summary>What Are Available Payment Methods?</summary>
+				<div class="faq__body"><p>We accept major cards, digital currency and HTP tokens.</p></div>
+			</details>
+			<details><summary>How to Receive a Live Funded Account with HyperTicks?</summary>
+				<div class="faq__body"><p>Top performers are handpicked for a private interview, after which our risk team builds a custom live plan.</p></div>
+			</details>
+		</div>
+	</section>
 
-		<section class="legal">
-			<h2>Trade like a <span>Pro</span></h2><p class="chip">Our General Policy</p>
-			<p>The products, content, and services offered by Hyperticks provide access to trading education and simulated evaluation programs only. Nothing on this page should be interpreted as investment advice, a promise of performance, or a recommendation to buy or sell any financial instrument.</p>
-			<h3>Risk Disclosure</h3><p>Trading futures, foreign exchange, and contracts for difference involves substantial risk. Simulated performance is not necessarily indicative of live results, and traders should only participate after understanding the applicable program rules.</p>
-			<h3>Hypothetical Performance Disclosure</h3><p>Performance examples are hypothetical and shown for illustrative purposes. They do not represent actual customer returns and may not account for fees, slippage, liquidity, market events, or psychological factors.</p>
-			<h3>CFTC Rule 4.41 Compliance Statement</h3><p>Hypothetical or simulated performance results have limitations. Unlike an actual performance record, simulated results do not represent live trading and may under or over compensate for market impact.</p>
-			<h3>Customer Compensation Disclosure</h3><p>Marketing statements and testimonials may represent selected customer experiences. Individual results vary, and eligibility for rewards depends on the terms of the selected Hyperticks program.</p>
-			<p class="copyright">© 2026 Hyperticks. All Rights Reserved.</p>
-		</section>
-	</main>
+	<!-- Discord -->
+	<section class="section discord-wrap">
+		<div class="container">
+			<div class="discord">
+				<div class="discord__icon">💬</div>
+				<h2 class="gradient-text">Join our Community</h2>
+				<a class="badge-pill" href="#">Join Hyperticks Dashboard</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Partners -->
+	<section class="section partners">
+		<div class="container center">
+			<p class="tag center-pill">Our partners</p>
+			<h2 class="gradient-text section__title center">Powered By</h2>
+			<div class="partners__row">
+				<span class="wordmark">TradingView</span>
+				<span class="wordmark">ATAS</span>
+				<span class="wordmark">Quantower</span>
+				<span class="wordmark">NinjaTrader</span>
+				<span class="wordmark">DeepMap</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container footer__grid">
+			<div class="footer__brand">
+				<a class="brand" href="#top">Hyper<span>ticks</span></a>
+				<p class="footer__line">📍 Dubai Digital Park</p>
+				<p class="footer__line">✉️ business@hyperticks.com</p>
+				<div class="footer__btns">
+					<a class="badge-pill badge-pill--sm" href="marketplace.html">Get Started</a>
+					<a class="badge-pill badge-pill--sm" href="index.html">Login</a>
+				</div>
+			</div>
+			<nav class="footer__col" aria-label="About">
+				<h4>About</h4>
+				<a href="#">About Us</a>
+				<a href="#faq">FAQ</a>
+				<a href="#">Get In Touch</a>
+				<a href="#">Announcements</a>
+				<a href="marketplace.html">Get Started</a>
+				<a href="index.html">Login</a>
+			</nav>
+			<div class="footer__news">
+				<h4>Join Our Newsletter</h4>
+				<form class="newsletter" onsubmit="return false">
+					<input type="email" placeholder="Enter your email" aria-label="Email">
+					<button type="submit">Send</button>
+				</form>
+				<p class="footer__follow">Follow Us:</p>
+				<div class="footer__social">
+					<a href="#" aria-label="LinkedIn">in</a>
+					<a href="#" aria-label="X">𝕏</a>
+					<a href="#" aria-label="Instagram">◎</a>
+					<a href="#" aria-label="TikTok">♪</a>
+					<a href="#" aria-label="YouTube">▶</a>
+				</div>
+			</div>
+		</div>
+		<div class="container footer__bottom">
+			<span>© 2026 Hyperticks. All Rights Reserved.</span>
+			<span class="footer__legal"><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a></span>
+		</div>
+	</footer>
 
 	<script>
-		document.querySelectorAll('.programs .segment button').forEach((button) => {
-			button.addEventListener('click', () => {
-				document.querySelectorAll('.programs .segment button').forEach((b) => b.classList.toggle('is-active', b === button));
+		(function () {
+			document.querySelectorAll('[data-rotate]').forEach(function (group) {
+				var items = group.querySelectorAll('.rotator__item');
+				if (items.length < 2) return;
+				var i = 0;
+				setInterval(function () {
+					items[i].classList.remove('is-active');
+					i = (i + 1) % items.length;
+					items[i].classList.add('is-active');
+				}, 3000);
 			});
-		});
+		})();
 	</script>
 </body>
 </html>
