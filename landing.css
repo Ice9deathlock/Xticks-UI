@@ -58,17 +58,16 @@ h1, h2, h3, p { margin: 0; }
 
 .pill-chip {
 	display: inline-block;
-	background: var(--panel-2);
+	padding: 10px 20px;
 	border-radius: 10px;
-	padding: 9px 20px;
+	border: 1px solid transparent;
+	background:
+		linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)) padding-box,
+		linear-gradient(135deg, #06ffc0, #3a3a3a) border-box;
 	font-size: 15px;
 	font-weight: 600;
+	color: var(--green);
 	margin: 0 0 16px;
-	background-image: linear-gradient(180deg, var(--green-2), var(--green));
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	box-shadow: inset 0 0 0 100px var(--panel-2);
 }
 
 /* ---------- Buttons ---------- */
@@ -90,23 +89,40 @@ h1, h2, h3, p { margin: 0; }
 .btn:hover { transform: translateY(-1px); }
 .btn--accent { background: linear-gradient(180deg, var(--green-2), var(--green)); color: #04130e; border-color: transparent; font-weight: 700; }
 .btn--accent:hover { box-shadow: 0 6px 24px rgba(6, 255, 192, .35); }
-.btn--solid { border-color: var(--green); }
-.btn--ghost { border-color: var(--gray); }
+.btn--solid {
+	border: 1px solid transparent;
+	background:
+		linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)) padding-box,
+		linear-gradient(180deg, #343433, #06ffc0) border-box;
+}
+.btn--ghost { border: 1px solid var(--gray); background: rgba(255,255,255,.1); }
 .btn--pill { background: var(--panel-2); border-color: transparent; }
 .btn--pill:hover { box-shadow: 0 0 0 1px var(--green) inset; }
 .btn--mini { padding: 7px 22px; font-size: 13px; }
 
 /* ---------- Ticker ---------- */
+/* Top bar: market tabs + ticker */
+.topbar-row { display: flex; align-items: stretch; min-height: 40px; }
+.market-tabs { display: flex; flex: none; }
+.market-tabs button {
+	padding: 0 30px; border: 0; background: #0c1212; color: var(--muted);
+	font-size: 15px; font-weight: 700; cursor: pointer;
+}
+.market-tabs button.is-active { background: #000; color: #fff; }
 .ticker {
+	flex: 1; min-width: 0;
 	background: linear-gradient(90deg, var(--green-2), var(--green));
 	color: #04130e;
 	overflow: hidden;
 	white-space: nowrap;
 	font-weight: 800;
 	font-size: 13px;
+	display: flex;
+	align-items: center;
 }
-.ticker__track { display: inline-flex; gap: 64px; padding: 7px 0; animation: ticker 26s linear infinite; }
-.ticker__track span { display: inline-flex; gap: 8px; }
+.ticker__track { display: inline-flex; gap: 56px; padding: 7px 0; animation: ticker 26s linear infinite; }
+.ticker__track span { display: inline-flex; align-items: center; gap: 10px; }
+.ticker .chip { font-style: normal; border: 1px solid rgba(0,0,0,.3); border-radius: 50px; padding: 2px 12px; }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ---------- Nav ---------- */
@@ -117,7 +133,7 @@ h1, h2, h3, p { margin: 0; }
 	border-bottom: 1px solid rgba(255, 255, 255, .06);
 }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 800; letter-spacing: -0.03em; }
+.brand { display: inline-flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 800; font-style: italic; letter-spacing: -0.03em; }
 .brand__dot { width: 11px; height: 11px; border-radius: 50%; background: var(--green); box-shadow: 0 0 16px 4px var(--green-deep); }
 .nav__links { display: flex; gap: 30px; }
 .nav__links a { color: #fff; font-size: 15px; font-weight: 500; }
@@ -125,31 +141,37 @@ h1, h2, h3, p { margin: 0; }
 .nav__cta { padding: 9px 24px; font-size: 15px; }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; padding: 40px 0 60px; overflow: hidden; text-align: center; }
+.hero { position: relative; padding: 80px 0 70px; overflow: hidden; text-align: center; }
+.hero__bg {
+	position: absolute; inset: 0;
+	background: #000 url("assets/hero-bg.webp") center center / cover no-repeat;
+	z-index: 0;
+}
 .hero__inner { position: relative; z-index: 1; }
-.hero__art { display: block; width: 100%; max-width: 1280px; height: auto; margin: 0 auto; }
 .trustpilot { display: inline-flex; gap: 8px; align-items: center; color: #fff; font-size: 15px; margin-bottom: 24px; }
 .hero__title {
-	font-size: clamp(38px, 5.4vw, 62px);
-	font-weight: 600; line-height: 1.08; margin: 0 auto 22px;
-	max-width: 720px; min-height: 1.15em;
+	font-size: clamp(40px, 6vw, 74px);
+	font-weight: 600; line-height: 1.04; letter-spacing: -0.02em; margin: 0 auto 22px;
+	max-width: 820px;
 }
 .hero__title em { font-style: normal; font-weight: 300; }
-.hero__sub { font-size: clamp(16px, 1.7vw, 20px); color: #fff; max-width: 720px; margin: 0 auto 30px; min-height: 2.6em; }
+.hero__sub { font-size: clamp(16px, 1.6vw, 20px); color: #fff; max-width: 700px; margin: 0 auto 32px; }
 .hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
 .hero__cta .btn { font-size: 18px; padding: 13px 44px; }
 
-.hero__pills { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
+.hero__pills { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
 .hpill {
-	background: var(--panel-2);
+	width: 180px; height: 92px;
+	display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
 	border-radius: 13px;
-	padding: 14px 18px;
-	font-size: 14px;
-	font-weight: 800;
-	color: var(--green);
-	max-width: 150px;
-	line-height: 1.2;
+	border: 1px solid transparent;
+	background:
+		linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)) padding-box,
+		linear-gradient(180deg, #ffffff, #06ffc0) border-box;
+	text-align: center;
 }
+.hpill b { color: var(--green); font-size: 24px; font-weight: 800; }
+.hpill i { color: #fff; font-style: normal; font-size: 13px; font-weight: 500; }
 .hero__trust { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 34px; background: rgba(217,217,217,.12); border-radius: 20px; padding: 9px 22px; width: fit-content; margin-left: auto; margin-right: auto; }
 .hero__trust b { font-weight: 700; }
 
@@ -166,18 +188,29 @@ h1, h2, h3, p { margin: 0; }
 .features__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 40px; }
 .feature {
 	position: relative;
-	padding: 34px 30px;
+	min-height: 300px;
+	padding: 40px 34px;
 	border-radius: 30px;
 	background: #0c1114;
 	overflow: hidden;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .feature::before {
-	content: ""; position: absolute; left: -60px; bottom: -120px;
-	width: 240px; height: 240px; border-radius: 50%;
-	background: rgba(6, 255, 192, .25); filter: blur(120px);
+	content: ""; position: absolute; left: 50%; bottom: -150px; transform: translateX(-50%);
+	width: 320px; height: 300px; border-radius: 50%;
+	background: rgba(6, 255, 192, .22); filter: blur(120px);
 }
-.feature__icon { position: relative; font-size: 34px; margin-bottom: 14px; filter: drop-shadow(0 0 12px rgba(6,255,192,.6)); }
+.feature--bordered {
+	border: 2px solid transparent;
+	background:
+		linear-gradient(#141414, #141414) padding-box,
+		linear-gradient(160deg, rgba(6,255,192,.55), rgba(6,255,192,.04)) border-box;
+}
+.feature__icon { position: relative; width: 64px; height: 64px; object-fit: contain; margin-bottom: 16px; filter: drop-shadow(0 0 12px rgba(6,255,192,.5)); }
 .feature h3 { position: relative; font-size: 26px; font-weight: 900; margin-bottom: 12px; }
 .feature p { position: relative; color: #fff; font-size: 16px; line-height: 1.5; max-width: 470px; margin: 0 auto; }
 
@@ -187,7 +220,8 @@ h1, h2, h3, p { margin: 0; }
 	display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;
 	padding: 28px 24px;
 	background: var(--green-dim);
-	box-shadow: 0 4px 20px 6px rgba(6, 255, 192, .18);
+	border: 1px solid var(--green-deep);
+	box-shadow: 0 4px 20px 10px rgba(6, 255, 192, .12);
 	border-radius: 20px;
 	text-align: center;
 }
@@ -268,10 +302,10 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- How It Works ---------- */
 .how__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
-.how-card { position: relative; min-height: 280px; padding: 28px 24px; border-radius: 39px; background: rgba(0,0,0,.2); overflow: hidden; box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset; }
-.how-card::before { content: ""; position: absolute; left: 50%; bottom: -120px; transform: translateX(-50%); width: 260px; height: 260px; border-radius: 50%; background: rgba(6,255,192,.2); filter: blur(120px); }
-.how-card__step { position: relative; font-weight: 700; font-size: 22px; margin-bottom: 12px; }
-.how-card__icon { position: relative; font-size: 60px; margin: 10px 0 30px; }
+.how-card { position: relative; min-height: 480px; padding: 28px 26px; border-radius: 39px; background: rgba(0,0,0,.2); border: 1px solid var(--green-deep); overflow: hidden; }
+.how-card::before { content: ""; position: absolute; left: 50%; top: 38%; transform: translate(-50%,-50%); width: 300px; height: 300px; border-radius: 50%; background: rgba(6,255,192,.2); filter: blur(120px); }
+.how-card__step { position: relative; font-weight: 700; font-size: 22px; margin-bottom: 8px; }
+.how-card__icon { position: relative; display: block; width: 200px; max-width: 70%; height: auto; margin: 6px auto 26px; }
 .how-card h3 { position: relative; font-size: 22px; font-weight: 800; margin-bottom: 10px; }
 .how-card__desc { position: relative; color: #fff; font-size: 16px; margin-bottom: 16px; }
 .how-card__row { position: relative; display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-weight: 700; }
@@ -281,8 +315,10 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- Testimonials ---------- */
 .testimonials__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.tcard { padding: 28px 24px; border-radius: 20px; background: rgba(255,255,255,.04); }
-.tcard--active { background: #000; box-shadow: 0 4px 20px 6px rgba(6,255,192,.2); }
+.tcard { position: relative; padding: 28px 24px; border-radius: 20px; background: rgba(255,255,255,.04); border: 1px solid rgba(0,110,82,.6); }
+.tcard--active { background: #000; border-color: var(--green-deep); box-shadow: 0 4px 20px 6px rgba(6,255,192,.2); }
+.tcard__quote { position: absolute; top: 24px; right: 24px; width: 46px; height: 46px; object-fit: contain; }
+.tcard h3 { padding-right: 56px; }
 .tcard h3 { font-size: 26px; font-weight: 700; margin-bottom: 12px; }
 .tcard .stars { display: block; margin-bottom: 14px; }
 .tcard p { color: #fff; font-size: 16px; line-height: 1.3; }

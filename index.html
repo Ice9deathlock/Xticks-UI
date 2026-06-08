@@ -11,15 +11,23 @@
 </head>
 <body>
 
-	<!-- Promo ticker -->
-	<div class="ticker" aria-hidden="true">
-		<div class="ticker__track">
-			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
-			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
-			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
-			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
-			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
-			<span>50% OFF + BOGO &nbsp;·&nbsp; USE CODE: <b>BOGO50</b></span>
+	<!-- Top bar: market tabs + promo ticker -->
+	<div class="topbar-row">
+		<div class="market-tabs">
+			<button type="button" class="is-active">FX</button>
+			<button type="button">Futures</button>
+		</div>
+		<div class="ticker" aria-hidden="true">
+			<div class="ticker__track">
+				<span>50% OFF+ BOGO <i class="chip">USE CODE: BOGO</i></span>
+				<span>50% OFF+ BOGO <i class="chip">USE CODE: BOGO</i></span>
+				<span>50% OFF+ BOGO <i class="chip">USE CODE: BOGO</i></span>
+				<span>50% OFF+ BOGO <i class="chip">USE CODE: BOGO</i></span>
+				<span>50% OFF+ BOGO <i class="chip">USE CODE: BOGO</i></span>
+				<span>50% OFF+ BOGO <i class="chip">USE CODE: BOGO</i></span>
+				<span>50% OFF+ BOGO <i class="chip">USE CODE: BOGO</i></span>
+				<span>50% OFF+ BOGO <i class="chip">USE CODE: BOGO</i></span>
+			</div>
 		</div>
 	</div>
 
@@ -39,18 +47,20 @@
 
 	<!-- Hero -->
 	<section class="hero" id="top">
+		<div class="hero__bg" aria-hidden="true"></div>
 		<div class="container hero__inner">
-			<img class="hero__art" src="assets/hero-art.webp" alt="Trade All Markets With One Firm — HyperTicks is the first futures evaluation firm to step into FX, bringing a unique futures-style edge and a fresh twist to the industry.">
+			<h1 class="hero__title gradient-text">Trade All Markets<br>With One Firm</h1>
+			<p class="hero__sub">HyperTicks is the first futures evaluation firm to step into FX bringing a unique futures-style edge and a fresh twist to the industry.</p>
 			<div class="hero__cta">
 				<a class="btn btn--solid" href="marketplace.html">Get Started</a>
 				<a class="btn btn--ghost" href="#">Join Discord</a>
 			</div>
 
 			<div class="hero__pills">
-				<span class="hpill">10K Traders Using Hyperticks</span>
-				<span class="hpill">300+ Instruments Available</span>
-				<span class="hpill">$100K+ Rewarded Monthly</span>
-				<span class="hpill">24h Reward Processing</span>
+				<span class="hpill"><b>10K</b><i>Traders Using Hyperticks</i></span>
+				<span class="hpill"><b>300+</b><i>Instruments Available</i></span>
+				<span class="hpill"><b>$100K+</b><i>Rewarded Monthly</i></span>
+				<span class="hpill"><b>24h</b><i>Reward Processing</i></span>
 			</div>
 
 			<div class="hero__trust">
@@ -67,25 +77,25 @@
 			<h2 class="gradient-text section__title">Exclusive Hyperticks Features</h2>
 		</div>
 		<div class="container features__grid">
-			<article class="feature">
-				<div class="feature__icon">⇄</div>
+			<article class="feature feature--bordered">
+				<img class="feature__icon" src="assets/ic-arrows.png" alt="">
 				<h3>Futures + FX in One Firm</h3>
 				<p>With HyperTicks, you can access both simulated markets Futures and FX from one place, giving you the flexibility to trade your edge across multiple environments.</p>
 			</article>
 			<article class="feature">
-				<div class="feature__icon">⏱</div>
+				<img class="feature__icon" src="assets/ic-clock.png" alt="">
 				<h3>24-Hour</h3>
-				<p>We will process your rewards in less than 24H or you get 120% of your reward.</p>
+				<p>We will process your rewards in less than 24H or you get 120% of your reward</p>
+			</article>
+			<article class="feature feature--bordered">
+				<img class="feature__icon" src="assets/ic-trophy.png" alt="">
+				<h3>Reward System HPT</h3>
+				<p>At Hyperticks we built a system to reward our traders switch each step giving the HPT to be used for multiple features</p>
 			</article>
 			<article class="feature">
-				<div class="feature__icon">🏆</div>
-				<h3>Reward System HTTP</h3>
-				<p>Supercharge your trading career with our exclusive scaling plan. Grow your account by 100% with every 10% Reward on our instant accounts.</p>
-			</article>
-			<article class="feature">
-				<div class="feature__icon">⚡</div>
+				<img class="feature__icon" src="assets/ic-award.png" alt="">
 				<h3>Best Instant Programs</h3>
-				<p>Skip the wait with our instant programs and get straight to trading — no consistency rule, no drawn-out evaluation, just your edge and the markets.</p>
+				<p>We provide the best instant programs in the industry both with no consistency rules and both fit many trading styles</p>
 			</article>
 		</div>
 	</section>
@@ -252,7 +262,7 @@
 		<div class="container how__grid">
 			<article class="how-card">
 				<p class="how-card__step gradient-accent">Step 1</p>
-				<div class="how-card__icon">🖱️</div>
+				<img class="how-card__icon" src="assets/3d-target.webp" alt="">
 				<h3>Choose your program</h3>
 				<p class="how-card__desc">Pass your evaluation, or skip it with our instant programs.</p>
 				<div class="how-card__row"><span class="dot"></span><b>Choose Your Program</b></div>
@@ -260,7 +270,7 @@
 			</article>
 			<article class="how-card">
 				<p class="how-card__step gradient-accent">Step 2</p>
-				<div class="how-card__icon">🪙</div>
+				<img class="how-card__icon" src="assets/3d-pie.webp" alt="">
 				<h3>Claim 80% Split</h3>
 				<p class="how-card__desc">The most important part where you trade your strategy and get rewarded.</p>
 				<div class="how-card__row"><span class="dot"></span><b>Flexible reward options</b></div>
@@ -273,16 +283,19 @@
 	<section class="section testimonials">
 		<div class="container testimonials__grid">
 			<article class="tcard">
+				<img class="tcard__quote" src="assets/ic-quote.png" alt="">
 				<h3>Elvis Finch</h3>
 				<div class="stars" aria-hidden="true">★★★★★</div>
 				<p>One of the best prop firms in the game right now. Best instant funded account, i would recommend getting the instant pro + it's an absolute game changer.</p>
 			</article>
 			<article class="tcard tcard--active">
+				<img class="tcard__quote" src="assets/ic-quote.png" alt="">
 				<h3>Ralph Turner</h3>
 				<div class="stars" aria-hidden="true">★★★★★</div>
 				<p>Growing firm, working with traders to build their knowledge and the community of traders. Platform is awesome and intuitive.</p>
 			</article>
 			<article class="tcard">
+				<img class="tcard__quote" src="assets/ic-quote.png" alt="">
 				<h3>Sophia</h3>
 				<div class="stars" aria-hidden="true">★★★★★</div>
 				<p>Amazing experience with fast support, fastest executions from all the prop firms I've used so far and some unique trading platforms. The best rules out there for evaluations, overall great experience.</p>
